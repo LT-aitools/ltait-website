@@ -43,28 +43,29 @@ const Bios = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-hot-pink flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <img 
-                  src="/public/lovable-uploads/cec9ca00-b4ab-493e-b45a-96370cd9ccdd.png" 
-                  alt="Netta" 
+                  src="/public/images/Netta_Levran.jpg" 
+                  alt="Netta photo" 
                   className="w-full h-full object-cover"
                 />
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold text-hot-pink">Netta</h3>
-                <p className="text-charcoal/80 mt-1">AI explorer with a background in linguistics and human-computer interaction</p>
+                <h3 className="text-2xl font-bold text-hot-pink">Netta Levran</h3>
+                <p className="text-charcoal/80 mt-1">AProduct Innovation Director by day, AI experimenter by night. </p>
               </div>
             </div>
             
             <p className="mb-4 flex-grow">
-              Passionate about language models and how AI understands and generates human language. 
-              With expertise in both computational linguistics and UX research, Netta brings a unique 
-              human-centered perspective to our AI experiments.
+              Based in Tel Aviv, Netta brings her background in digital health, 
+              patient engagement platforms, and a deep appreciation for human-centered design to 
+              our AI adventures. When not debugging code she didn't write, she's organizing women's 
+              health conferences or speaking multiple languages (sometimes to the AI, with varying results).
             </p>
             
             <div className="mt-4">
               <SocialLinks 
-                linkedin="https://linkedin.com/in/netta" 
-                website="https://netta-website.com"
+                linkedin="https://www.linkedin.com/in/nettalevran/" 
+                website="https://nettalevran.com/"
               />
             </div>
           </div>
@@ -74,28 +75,29 @@ const Bios = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-hot-pink flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <img 
-                  src="/public/lovable-uploads/7d747753-7076-4e79-a8e6-bf6879f73551.png" 
-                  alt="Charlie" 
+                  src="/public/images/Charlie_Lau.jpg" 
+                  alt="Charlie photo" 
                   className="w-full h-full object-cover"
                 />
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold text-hot-pink">Charlie</h3>
-                <p className="text-charcoal/80 mt-1">Tech enthusiast with a love for creative solutions and a knack for AI development</p>
+                <h3 className="text-2xl font-bold text-hot-pink">Charlie Lau</h3>
+                <p className="text-charcoal/80 mt-1">Product & Growth leader with a knack for building things from scratch. </p>
               </div>
             </div>
             
             <p className="mb-4 flex-grow">
-              With a background in software engineering and a passion for AI, Charlie loves to push the 
-              boundaries of what's possible with generative models. Always tinkering with new technologies 
-              and finding innovative applications for emerging AI tools.
+              Based in Cape Town, Charlie has spent over a decade in early-stage startups across product, design, data, and 
+              marketing. When not trying to convince AI to scrape property websites or generate coherent blog posts, she's probably 
+              hanging upside down (aerial acrobatics), scuba diving, or planning her next trip (70+ countries and counting!)
+
             </p>
             
             <div className="mt-4">
               <SocialLinks 
-                linkedin="https://linkedin.com/in/charlie" 
-                website="https://charlie-website.com"
+                linkedin="https://www.linkedin.com/in/charlotteslau/" 
+                website="https://charlottelau.com"
               />
             </div>
           </div>

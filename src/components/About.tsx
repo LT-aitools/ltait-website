@@ -39,30 +39,30 @@ const About = () => {
         
         <div className="glass-card p-8 md:p-10 max-w-3xl">
           <p className="text-lg mb-4">
-            We created this space to document our journey exploring the fascinating world of generative AI. 
-            As AI technologies continue to evolve at a breathtaking pace, we wanted to share our experiments, 
-            insights, and occasional mishaps.
+            We're two longtime friends (we met at 13!) who decided to explore the world of generative AI. 
+            It's play, made serious: Each week, we tackle a new AI project and figure it out as we go—despite 
+            knowing next to nothing about how to actually build anything. (<i>"When you say 'commit the code,' 
+              how do I actually do that?" one of us definitely asked Grok while staring blankly at our brand-new GitHub.</i>)
           </p>
           
           <p className="text-lg mb-4">
-            Our backgrounds in technology and design give us a unique perspective on both the technical aspects 
-            and the human-centered implications of AI. We're particularly interested in how these tools can 
-            enhance creativity rather than replace it.
+            Every Thursday, we log on for a 3-hour show-and-tell (ahem, meeting) to demonstrate what we've built--
+            or spectacularly failed to build. No polished tutorials or perfect demonstrations—just real experiences, 
+            ugly fails, unexpected wins, and hard-won learnings from two friends figuring these tools out together.
           </p>
           
           <p className="text-lg mb-6">
-            Join us as we navigate this rapidly changing landscape, testing new models, creating innovative 
-            applications, and reflecting on what it all means for our future. We believe in open collaboration 
-            and learning in public, so feel free to connect with us on any of the platforms below.
+            We document it all—transforming our chaotic experiments into blogs and videos (using AI, naturally)--
+            so that (1) we remember what we did 😅, and (2) hopefully you can learn from our stumbles.
           </p>
           
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <SocialLinks 
-              medium="https://medium.com"
-              github="https://github.com" 
-              twitter="https://twitter.com" 
-              bluesky="https://bsky.app" 
-              linkedin="https://linkedin.com"
+          medium="https://medium.com/@letstalkaitools" 
+          github="https://github.com/LT-aitools" 
+          twitter="https://x.com/letstalkaitools" 
+          bluesky="https://bsky.app/letstalkaitools" 
+          linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
             />
           </div>
         </div>

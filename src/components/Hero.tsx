@@ -56,16 +56,15 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
-          Welcome to our corner of the internet where we dive into the world of generative AI, 
-          sharing insights, discoveries, and a bit of fun along the way.
+          We’re two product gals (and our increasingly opinionated chatbots) exploring the wild west of Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
         </p>
         
         <SocialLinks 
-          github="https://github.com" 
-          medium="https://medium.com" 
-          twitter="https://twitter.com" 
-          bluesky="https://bsky.app" 
-          linkedin="https://linkedin.com"
+          medium="https://medium.com/@letstalkaitools" 
+          github="https://github.com/LT-aitools" 
+          twitter="https://x.com/letstalkaitools" 
+          bluesky="https://bsky.app/letstalkaitools" 
+          linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
           className="justify-center mb-12"
         />
         
