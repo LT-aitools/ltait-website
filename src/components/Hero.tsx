@@ -56,7 +56,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
-          We’re two product gals (and our increasingly opinionated chatbots) exploring the wild west of Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
+          ...just two product gals (and our increasingly opinionated chatbots) exploring Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
         </p>
         
         <SocialLinks 
