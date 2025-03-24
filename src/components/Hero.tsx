@@ -32,10 +32,10 @@ const Hero = () => {
     img.src = '/Main-Illustration.jpg';
     img.onload = () => {
       setImageLoaded(true);
-      // Show content after 1.2 seconds (when image is almost done scaling)
+      // Show content after 1.1 seconds (when image is almost done scaling)
       const timer = setTimeout(() => {
         setShowContent(true);
-      }, 1200);
+      }, 1100);
       return () => clearTimeout(timer);
     };
   }, []);
@@ -60,9 +60,10 @@ const Hero = () => {
           />
         </div>
 
-        <div 
-          className={`transition-opacity duration-1500 ease-in-out ${showContent ? 'opacity-100' : 'opacity-0'}`}
-        >
+        <div style={{ 
+          opacity: showContent ? 1 : 0,
+          transition: 'opacity 600ms ease-out'
+        }}>
           <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-4 bg-gradient-to-r from-hot-pink to-charcoal bg-clip-text text-transparent">
             Hi, we're Netta and Charlie
           </h1>
@@ -80,18 +81,22 @@ const Hero = () => {
             className="justify-center mb-12"
           />
           
-          <div className="animate-float mt-6 flex justify-center w-full">
+          <button 
+            onClick={() => {
+              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="animate-float mt-6 flex justify-center w-full text-hot-pink hover:text-hot-pink/80 transition-colors"
+          >
             <svg 
               width="40" 
               height="40" 
               viewBox="0 0 24 24" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className="text-hot-pink"
             >
               <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
       
