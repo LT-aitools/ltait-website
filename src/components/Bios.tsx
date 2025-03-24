@@ -51,7 +51,7 @@ const Bios = () => {
               
               <div>
                 <h3 className="text-2xl font-bold text-hot-pink">Netta Levran</h3>
-                <p className="text-charcoal/80 mt-1">AProduct Innovation Director by day, AI experimenter by night. </p>
+                <p className="text-charcoal/80 mt-1">Product Innovation Director by day, AI experimenter by night. </p>
               </div>
             </div>
             
@@ -83,7 +83,7 @@ const Bios = () => {
               
               <div>
                 <h3 className="text-2xl font-bold text-hot-pink">Charlie Lau</h3>
-                <p className="text-charcoal/80 mt-1">Product & Growth leader with a knack for building things from scratch. </p>
+                <p className="text-charcoal/80 mt-1">Startup veteran, growth whisperer, and AI tinkerer. </p>
               </div>
             </div>
             
