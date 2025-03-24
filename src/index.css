@@ -107,7 +107,7 @@
   }
 
 
-  @media (max-width: 950px) {
+  @media (max-width: 1050px) {
     .img-hide {
       display: none;
     }
