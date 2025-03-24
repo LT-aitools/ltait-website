@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { MediumSlug } from 'lucide-react';
+import { Rss } from 'lucide-react';
 
 type BlogPost = {
   title: string;
