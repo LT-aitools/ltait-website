@@ -32,7 +32,8 @@ const BlogPosts = () => {
   }, []);
 
   return (
-    <section id="blog" className="bg-white relative pb-64 md:pb-80">
+    <section id="blog" className="bg-gradient-to-b from-beige/20 to-beige/5 relative p
+b-24 md:pb-32">
       <div 
         ref={blogRef}
         className={`max-container transition-opacity duration-700 ${isVisible ? 'animate-slide-up opacity-100' : 'opacity-0'}`}
@@ -61,19 +62,7 @@ const BlogPosts = () => {
             View all posts →
           </a>
         </div>
-
-        <div className="absolute bottom-20 right-0 hidden lg:block">
-          <img 
-            src="/woman-coding-1.svg" 
-            alt="" 
-            width="400" 
-            className="opacity-80"
-            style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
-          />
-        </div>
       </div>
-      
-      <div className="absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-beige via-hot-pink to-beige opacity-10"></div>
     </section>
   );
 };
