@@ -64,13 +64,14 @@ const About = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 hidden md:block max-w-[40vw] lg:max-w-[30vw] xl:max-w-[25vw]">
-        <img 
+        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 hidden md:block">
+          <img 
             src="/woman-coding-1.png" 
             alt="Woman coding illustration" 
-            className="opacity-90 w-full h-auto object-contain"
+            className="opacity-90 w-[600px] img-2_3-size img-1_2-size img-1_4-size img-hide"
           />
         </div>
+
       </div>
     </section>
   );

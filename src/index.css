@@ -88,3 +88,34 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+@layer utilities {
+  .max-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  @media (max-width: 1350px) {
+    .img-2_3-size {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .img-1_2-size {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .img-1_4-size {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .img-hide {
+      display: none;
+    }
+  }
+}
+
