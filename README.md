@@ -1,4 +1,4 @@
-# Lets Talk AI Tools website (co-built with Lovable)
+# Lets Talk AI Tools website (co-built with Lovable & Cursor)
 
 ## How did we build this?
 - We set the general boundaries for the 4 sections of a single-page website.
@@ -17,10 +17,9 @@ Should have four sections to the single-page site:
 (4) Who we are → Two bios, side by side (one for Netta, one for Charlie) and then links to our Linkedin + personal websites
 ```
 
+- We had already previously developed our logo (using some other AI tool, and then manually adjusting the output in Figma). We used Canva to develop our color palette.
 
-- We had already previously developed our illustration (using Artbreeder and Faceswap) and our logo (using some other AI tool, and then manually adjusting the output in Figma). We used Canva to develop our color palette.
-
-## Using Lovable
+## Using Lovable & Cursor
 
 After testing multiple tools (Bolt, Base44, Uizard, UXPilot, Visily), we find Lovable consistently creates the nicest (not boring) sites, that actually adheres to the design brief we give it. 
 
@@ -29,12 +28,20 @@ It designed & coded most of this website, and gave us this preview link:
 
 We then connected it to our Github repo and manually edited some things (e.g. text/copy from Claude) and social media links. (In hindsight, we probably could have asked Cursor to do this.)
 
-Finally, we deployed (with the guiding bot-hands of Claude & ChatGPT) to our domain, using Vercel. 
+Then, we deployed (with the guiding bot-hands of Claude & ChatGPT) to our domain, using Vercel. At this point, we found out that some things coded by Lovable didn't work once deployed. For example, the RSS feed broke. 
+
+We used Cursor's coding agent to fix the RSS feed issue (changed the proxy) and to tweak some of the images/animations on the site.
+
+## The illustrations
+
+Both the hero illustration (of Netta and me) and the girl coding line drawing were made by Artbreeder. We then tweaked both: 
+- Duo portrait: Face-swapped us into the illustration using AI 
+- Girl coding: Removed the background using Canva's AI feature & saved as transparent PNG
 
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
