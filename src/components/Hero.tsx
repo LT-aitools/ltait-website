@@ -41,7 +41,7 @@ const Hero = () => {
       }}
     >
       <div className="max-container text-center relative z-10 animate-fade-in">
-        <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 transition-all duration-[2500ms] ease-in-out ${imageLoaded ? 'scale-100' : 'scale-[3]'}`}>
+        <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 ${imageLoaded ? 'scale-100' : 'scale-[2.5]'}`} style={{ transition: 'transform 2500ms ease-in-out' }}>
           <img 
             src="/Main-Illustration.jpg" 
             alt="Netta and Charlie" 

@@ -65,7 +65,14 @@ const About = () => {
         </div>
 
         <div className="absolute top-1/2 right-5 transform -translate-y-1/2 hidden lg:block opacity-10">
-          <img src="/chatbot.svg" alt="" width="200" height="200" className="text-hot-pink" />
+          <img 
+            src="/chatbot.svg" 
+            alt="" 
+            width="200" 
+            height="200" 
+            className="[&_path]:fill-hot-pink"
+            style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
+          />
         </div>
       </div>
     </section>
