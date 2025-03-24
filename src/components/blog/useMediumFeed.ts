@@ -19,7 +19,7 @@ export const useMediumFeed = () => {
     const fetchMediumPosts = async () => {
       try {
         // Using a proxy to avoid CORS issues
-        const proxyUrl = 'https://api.allorigins.win/get?url=';
+        const proxyUrl = 'https://corsproxy.io/?';
         const mediumRssUrl = encodeURIComponent('https://medium.com/feed/@letstalkaitools');
         
         const response = await fetch(`${proxyUrl}${mediumRssUrl}`);
