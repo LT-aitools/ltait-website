@@ -56,7 +56,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
-          We’re two product gals (and our increasingly opinionated chatbots) exploring the wild west of Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
+          We're two product gals (and our increasingly opinionated chatbots) exploring the wild west of Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
         </p>
         
         <SocialLinks 
@@ -68,7 +68,7 @@ const Hero = () => {
           className="justify-center mb-12"
         />
         
-        <div className="animate-float mt-6">
+        <div className="flex justify-center animate-float mt-6">
           <svg 
             width="40" 
             height="40" 
