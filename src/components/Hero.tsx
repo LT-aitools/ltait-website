@@ -1,9 +1,10 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
   
   useEffect(() => {
     const heroElement = heroRef.current;
@@ -25,6 +26,10 @@ const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setImageLoaded(true);
+  }, []);
+
   return (
     <section 
       id="hero" 
@@ -37,11 +42,12 @@ const Hero = () => {
       }}
     >
       <div className="max-container text-center relative z-10 animate-fade-in">
-        <div className="w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1">
+        <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 transition-all duration-1000 ${imageLoaded ? 'scale-100' : 'scale-150'}`}>
           <img 
             src="/public/lovable-uploads/f26fad48-b87f-45ca-9f75-0d0ab0919d8f.png" 
             alt="Netta and Charlie" 
             className="w-full h-full object-cover rounded-full"
+            onLoad={() => setImageLoaded(true)}
           />
         </div>
 
@@ -63,7 +69,7 @@ const Hero = () => {
           className="justify-center mb-12"
         />
         
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-float">
+        <div className="animate-float mt-6">
           <svg 
             width="40" 
             height="40" 

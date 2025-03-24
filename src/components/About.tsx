@@ -58,8 +58,8 @@ const About = () => {
           
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             <SocialLinks 
+              medium="https://medium.com"
               github="https://github.com" 
-              medium="https://medium.com" 
               twitter="https://twitter.com" 
               bluesky="https://bsky.app" 
               linkedin="https://linkedin.com"

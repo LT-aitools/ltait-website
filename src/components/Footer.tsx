@@ -1,5 +1,4 @@
 
-import { Github, Linkedin, Twitter } from 'lucide-react';
 import SocialLinks from './SocialLinks';
 
 const Footer = () => {
@@ -23,8 +22,8 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-end">
             <SocialLinks 
+              medium="https://medium.com"
               github="https://github.com" 
-              medium="https://medium.com" 
               twitter="https://twitter.com" 
               bluesky="https://bsky.app" 
               linkedin="https://linkedin.com"
