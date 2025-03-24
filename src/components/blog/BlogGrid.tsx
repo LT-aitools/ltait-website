@@ -15,10 +15,6 @@ const BlogGrid: FC<BlogGridProps> = ({ posts, loading, error }) => {
     return <BlogPostSkeleton />;
   }
 
-  if (error) {
-    return <div className="bg-red-50 p-4 rounded-md text-red-500">{error}</div>;
-  }
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {posts.map((post, index) => (
