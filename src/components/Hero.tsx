@@ -27,13 +27,17 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    setImageLoaded(true);
-    // Show content after 2 seconds (when image is almost done scaling)
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 2000);
-    
-    return () => clearTimeout(timer);
+    // Preload the image
+    const img = new Image();
+    img.src = '/Main-Illustration.jpg';
+    img.onload = () => {
+      setImageLoaded(true);
+      // Show content after 1.2 seconds (when image is almost done scaling)
+      const timer = setTimeout(() => {
+        setShowContent(true);
+      }, 1200);
+      return () => clearTimeout(timer);
+    };
   }, []);
 
   return (
@@ -48,12 +52,11 @@ const Hero = () => {
       }}
     >
       <div className="max-container text-center relative z-10">
-        <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 ${imageLoaded ? 'scale-100' : 'scale-[2.5]'}`} style={{ transition: 'transform 2500ms ease-in-out' }}>
+        <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 ${imageLoaded ? 'scale-100' : 'scale-[2.5]'}`} style={{ transition: 'transform 1500ms ease-in-out' }}>
           <img 
             src="/Main-Illustration.jpg" 
             alt="Netta and Charlie" 
             className="w-full h-full object-cover rounded-full"
-            onLoad={() => setImageLoaded(true)}
           />
         </div>
 

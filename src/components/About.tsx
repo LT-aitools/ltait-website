@@ -38,13 +38,13 @@ const About = () => {
         
         <div className="glass-card p-8 md:p-10 max-w-3xl">
           <p className="text-lg mb-4">
-            LTAIT is play, made serious: Each week, we each tackle a couple new AI projects and chatbot/vibe code our
+            Let's Talk AI Tools is play, made serious: Every week, we each tackle a couple AI projects and chatbot/vibe code our
             way through them. 
           </p>
           
           <p className="text-lg mb-4">
             Then every Thursday, we log on for a 3-hour show-and-tell (ahem, <em>meeting</em>) to demonstrate what we've built—
-            or spectacularly failed to build. No polished tutorials or perfect demonstrations—just real experiences, 
+            or spectacularly failed to build. No polished tutorials or perfect demos—just real experiences, 
             ugly fails, unexpected wins, and hard-won learnings from two old friends figuring these tools out together.
           </p>
           
@@ -64,13 +64,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/2 right-5 transform -translate-y-1/2 hidden lg:block opacity-10">
+        <div className="absolute top-1/2 right-5 transform -translate-y-1/2 hidden lg:block">
           <img 
-            src="/woman-coding-1.svg" 
+            src="/woman-coding-1.png" 
             alt="" 
-            width="200" 
-            height="200" 
-            style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
+            width="350" 
+            height="350" 
+            className="opacity-90"
           />
         </div>
       </div>
