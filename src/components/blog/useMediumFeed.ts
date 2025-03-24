@@ -17,42 +17,29 @@ export const useMediumFeed = () => {
   useEffect(() => {
     const fetchMediumPosts = async () => {
       try {
-        // Using RSSHub as a more reliable RSS proxy
-        const response = await fetch('https://rsshub.app/medium/@letstalkaitools');
+        // Using rss2json which provides CORS support
+        const response = await fetch(
+          'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@letstalkaitools'
+        );
         
         if (!response.ok) {
           throw new Error('Failed to fetch RSS feed');
         }
         
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, 'text/xml');
-        const items = xmlDoc.querySelectorAll('item');
+        const data = await response.json();
         
-        const parsedPosts: BlogPost[] = [];
+        if (!data.items) {
+          throw new Error('No items returned from RSS feed');
+        }
         
-        items.forEach((item) => {
-          const title = item.querySelector('title')?.textContent || '';
-          const link = item.querySelector('link')?.textContent || '#';
-          const pubDate = item.querySelector('pubDate')?.textContent || '';
-          
-          // Extract description from content:encoded or description
-          let description = '';
-          const contentEncoded = item.querySelector('content\\:encoded')?.textContent || '';
-          
-          if (contentEncoded) {
-            // Remove HTML tags to get plain text
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = contentEncoded;
-            description = tempDiv.textContent || '';
-            // Truncate to a reasonable length
-            description = description.substring(0, 150) + '...';
-          } else {
-            description = item.querySelector('description')?.textContent || '';
-          }
-          
-          parsedPosts.push({ title, link, pubDate, description });
-        });
+        const parsedPosts = data.items.map((item: any) => ({
+          title: item.title || '',
+          link: item.link || '#',
+          pubDate: item.pubDate || '',
+          description: item.description 
+            ? item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...'
+            : ''
+        }));
         
         setPosts(parsedPosts.slice(0, 4)); // Get the latest 4 posts
         setLoading(false);
