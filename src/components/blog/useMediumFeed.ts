@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
@@ -18,53 +17,14 @@ export const useMediumFeed = () => {
   useEffect(() => {
     const fetchMediumPosts = async () => {
       try {
-        // Using a proxy to avoid CORS issues
-        const proxyUrl = 'https://corsproxy.io/?';
-        const mediumRssUrl = encodeURIComponent('https://medium.com/feed/@letstalkaitools');
-        
-        const response = await fetch(`${proxyUrl}${mediumRssUrl}`);
+        const response = await fetch('/api/medium-feed');
         
         if (!response.ok) {
           throw new Error('Failed to fetch RSS feed');
         }
         
         const data = await response.json();
-        
-        if (!data.contents) {
-          throw new Error('No content returned from RSS feed');
-        }
-        
-        // Parse XML content
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(data.contents, 'text/xml');
-        const items = xmlDoc.querySelectorAll('item');
-        
-        const parsedPosts: BlogPost[] = [];
-        
-        items.forEach((item) => {
-          const title = item.querySelector('title')?.textContent || '';
-          const link = item.querySelector('link')?.textContent || '#';
-          const pubDate = item.querySelector('pubDate')?.textContent || '';
-          
-          // Extract description from content:encoded or description
-          let description = '';
-          const contentEncoded = item.querySelector('content\\:encoded')?.textContent || '';
-          
-          if (contentEncoded) {
-            // Remove HTML tags to get plain text
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = contentEncoded;
-            description = tempDiv.textContent || '';
-            // Truncate to a reasonable length
-            description = description.substring(0, 150) + '...';
-          } else {
-            description = item.querySelector('description')?.textContent || '';
-          }
-          
-          parsedPosts.push({ title, link, pubDate, description });
-        });
-        
-        setPosts(parsedPosts.slice(0, 4)); // Get the latest 4 posts
+        setPosts(data);
         setLoading(false);
       } catch (err) {
         console.error('Error fetching Medium posts:', err);
