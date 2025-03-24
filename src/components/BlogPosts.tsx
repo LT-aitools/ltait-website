@@ -1,4 +1,3 @@
-
 import { useRef, useState, useEffect } from 'react';
 import { Rss } from 'lucide-react';
 import BlogGrid from './blog/BlogGrid';
@@ -41,7 +40,7 @@ const BlogPosts = () => {
         <div className="flex items-center justify-between mb-10">
           <h2 className="section-title">Recent AI adventures</h2>
           <a 
-            href="https://medium.com/@username" 
+            href="https://medium.com/@letstalkaitools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-4 py-2 border border-hot-pink text-hot-pink rounded-md hover:bg-hot-pink hover:text-white transition-all duration-300 hidden md:block"
@@ -54,13 +53,17 @@ const BlogPosts = () => {
         
         <div className="mt-8 text-center md:hidden">
           <a 
-            href="medium.com/feed/@letstalkaitools" 
+            href="https://medium.com/@letstalkaitools" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-4 py-2 border border-hot-pink text-hot-pink rounded-md hover:bg-hot-pink hover:text-white transition-all duration-300 inline-block"
           >
             View all posts →
           </a>
+        </div>
+
+        <div className="absolute bottom-8 right-0 hidden lg:block">
+          <img src="/woman-coding-1.svg" alt="" width="300" className="opacity-80" />
         </div>
       </div>
       
