@@ -60,7 +60,9 @@ const Hero = () => {
           />
         </div>
 
-        <div className={`transition-opacity duration-700 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+        <div 
+          className={`transition-opacity duration-1500 ease-in-out ${showContent ? 'opacity-100' : 'opacity-0'}`}
+        >
           <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-4 bg-gradient-to-r from-hot-pink to-charcoal bg-clip-text text-transparent">
             Hi, we're Netta and Charlie
           </h1>

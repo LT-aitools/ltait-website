@@ -32,8 +32,7 @@ const BlogPosts = () => {
   }, []);
 
   return (
-    <section id="blog" className="bg-gradient-to-b from-beige/20 to-beige/5 relative p
-b-24 md:pb-32">
+    <section id="blog" className="bg-white relative pb-24 md:pb-32">
       <div 
         ref={blogRef}
         className={`max-container transition-opacity duration-700 ${isVisible ? 'animate-slide-up opacity-100' : 'opacity-0'}`}
