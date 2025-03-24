@@ -71,8 +71,6 @@ const About = () => {
             className="opacity-90 w-full h-auto object-contain"
           />
         </div>
-
-        </div>
       </div>
     </section>
   );
