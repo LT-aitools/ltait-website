@@ -10,9 +10,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-hot-pink rounded-full flex items-center justify-center mr-3">
-                <span className="font-bold text-white">N&C</span>
-              </div>
+              <img 
+                src="/images/LTAIT-Logo_plain.png" 
+                alt="Let's Talk AI Tools Logo" 
+                className="h-10 w-auto mr-3" 
+              />
               <h3 className="text-xl font-bold">Let's Talk AI Tools</h3>
             </div>
             <p className="mt-2 text-white/70 max-w-md">
@@ -22,11 +24,11 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-end">
             <SocialLinks 
-          medium="https://medium.com/@letstalkaitools" 
-          github="https://github.com/LT-aitools" 
-          twitter="https://x.com/letstalkaitools" 
-          bluesky="https://bsky.app/letstalkaitools" 
-          linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
+              medium="https://medium.com/@letstalkaitools" 
+              github="https://github.com/LT-aitools" 
+              twitter="https://x.com/letstalkaitools" 
+              bluesky="https://bsky.app/letstalkaitools" 
+              linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
               className="mb-4"
             />
             <p className="text-white/60 text-sm">

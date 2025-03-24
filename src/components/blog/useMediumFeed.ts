@@ -64,7 +64,7 @@ export const useMediumFeed = () => {
           parsedPosts.push({ title, link, pubDate, description });
         });
         
-        setPosts(parsedPosts.slice(0, 3)); // Get the latest 3 posts
+        setPosts(parsedPosts.slice(0, 4)); // Get the latest 4 posts
         setLoading(false);
       } catch (err) {
         console.error('Error fetching Medium posts:', err);
