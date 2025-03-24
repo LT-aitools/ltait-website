@@ -38,19 +38,16 @@ const About = () => {
         <h2 className="section-title">About this project</h2>
         
         <div className="glass-card p-8 md:p-10 max-w-3xl">
-          <p className="text-lg mb-4">
-            We're two longtime friends (we met at 13!) who decided to explore the world of generative AI.</p>
 
           <p className="text-lg mb-4">
-            It's play, made serious: Each week, we tackle a new AI project and figure it out as we go—despite 
-            knowing next to nothing about how to actually build anything. (<i>"When you say 'commit the code,' 
-              how do I actually do that?" one of us definitely asked Grok while staring blankly at our brand-new GitHub.</i>)
+            LTAIT is play, made serious: Each week, we each tackle a couple new AI projects and chatbot/vibe code our
+            way through them. 
           </p>
           
           <p className="text-lg mb-4">
-            Every Thursday, we log on for a 3-hour show-and-tell (ahem, meeting) to demonstrate what we've built—
+            Then every Thursday, we log on for a 3-hour show-and-tell (ahem, <em>meeting</em>) to demonstrate what we've built—
             or spectacularly failed to build. No polished tutorials or perfect demonstrations—just real experiences, 
-            ugly fails, unexpected wins, and hard-won learnings from two friends figuring these tools out together.
+            ugly fails, unexpected wins, and hard-won learnings from two old friends figuring these tools out together.
           </p>
           
           <p className="text-lg mb-6">
