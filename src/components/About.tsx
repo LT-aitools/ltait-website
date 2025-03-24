@@ -68,7 +68,7 @@ const About = () => {
           <img 
             src="/woman-coding-1.png" 
             alt="Woman coding illustration" 
-            className="opacity-90 w-[600px] img-2_3-size img-1_2-size img-1_4-size img-hide"
+            className="opacity-90 w-[600px] img-2_3-size img-1_2-size img-hide"
           />
         </div>
 

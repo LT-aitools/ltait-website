@@ -100,17 +100,12 @@
     }
   }
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1170px) {
     .img-1_2-size {
       width: 300px;
     }
   }
 
-  @media (max-width: 1000px) {
-    .img-1_4-size {
-      width: 150px;
-    }
-  }
 
   @media (max-width: 900px) {
     .img-hide {
