@@ -1,54 +1,34 @@
-# Welcome to your Lovable project
+# Lets Talk AI Tools website (co-built with Lovable)
 
-## Project info
+## How did we build this?
+- We set the general boundaries for the 4 sections of a single-page website.
+- We gave Claude a bunch of background info, our CVs, and some blog post copy, and asked it to write copy for our website. 
+- We then made that prompt a bit shorter and added some design specs in, and handed it over to Lovable to code us the website.
 
-**URL**: https://lovable.dev/projects/07cdbf57-27f0-415a-81b7-ec690739fa35
+Our prompt: 
+``A personal website for two friends exploring generative AI and blogging about their explorations. 
+Design should be minimalist style, with some whimsical funk/quirk thrown in via illustration or color/graphic choices,  and possibly a self-aware nod to tech/code/ robots;
+Using some or all of our major brand colors - Blush: #fff3ed, Beige: #e0a486, Hot pink: #e64964, Charcoal: #494747
+Should have four sections to the single-page site: 
+(1) Hero: [Photo] + “Hi, we’re Netta and Charlie” → Short blurb section, larger text size (takes up most of the page, but clear marker to keep scrolling down for more);
+(2) About this project → A bit more info (3 paragraphs), plus links to our Medium, Github, BlueSky, X, and Linkedin pages ;
+(3) Recent blog posts (“Recent AI adventures”) → An RSS feed from our Medium account;
+(4) Who we are → Two bios, side by side (one for Netta, one for Charlie) and then links to our Linkedin + personal websites
+``
 
-## How can I edit this code?
+- We had already previously developed our illustration (using Artbreeder and Faceswap) and our logo (using some other AI tool, and then manually adjusting the output in Figma). We used Canva to develop our color palette.
 
-There are several ways of editing your application.
+## Using Lovable
 
-**Use Lovable**
+After testing multiple tools (Bolt, Base44, Uizard, UXPilot, Visily), we find Lovable consistently creates the nicest (not boring) sites, that actually adheres to the design brief we give it. 
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/07cdbf57-27f0-415a-81b7-ec690739fa35) and start prompting.
+It designed & coded most of this website, and gave us this preview link: 
+**Lovable URL**: https://lovable.dev/projects/07cdbf57-27f0-415a-81b7-ec690739fa35
 
-Changes made via Lovable will be committed automatically to this repo.
+We then connected it to our Github repo and manually edited some things (e.g. text/copy from Claude) and social media links. (In hindsight, we probably could have asked Cursor to do this.)
 
-**Use your preferred IDE**
+Finally, we deployed (with the guiding bot-hands of Claude & ChatGPT) to our domain, using Vercel. 
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?
 
@@ -60,10 +40,7 @@ This project is built with .
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/07cdbf57-27f0-415a-81b7-ec690739fa35) and click on Share -> Publish.
+## Like this?
 
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Cool - Please follow our other AI projects at medium.com/@letstalkaitools

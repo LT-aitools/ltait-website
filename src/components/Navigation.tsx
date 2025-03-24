@@ -28,7 +28,7 @@ const Navigation = () => {
     >
       <div className="max-container flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <img src="/images/LTAIT-Logo_plain.png" alt="Let's Talk AI Tools Logo" className="h-8 w-auto" />
+          <img src="LTAIT-Logo_plain.png" alt="Let's Talk AI Tools Logo" className="h-8 w-auto" />
         </a>
         <nav className="hidden md:flex space-x-1">
           <a href="#hero" className="nav-link">Home</a>

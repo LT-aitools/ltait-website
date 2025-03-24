@@ -43,7 +43,7 @@ const Bios = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-hot-pink flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <img 
-                  src="/public/images/Netta_Levran.jpg" 
+                  src="Netta_Levran.jpg" 
                   alt="Netta photo" 
                   className="w-full h-full object-cover"
                 />
@@ -75,7 +75,7 @@ const Bios = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-hot-pink flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <img 
-                  src="/public/images/Charlie_Lau.jpg" 
+                  src="Charlie_Lau.jpg" 
                   alt="Charlie photo" 
                   className="w-full h-full object-cover"
                 />
