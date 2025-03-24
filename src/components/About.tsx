@@ -66,11 +66,10 @@ const About = () => {
 
         <div className="absolute top-1/2 right-5 transform -translate-y-1/2 hidden lg:block opacity-10">
           <img 
-            src="/chatbot.svg" 
+            src="/woman-coding-1.svg" 
             alt="" 
             width="200" 
             height="200" 
-            className="[&_path]:fill-hot-pink"
             style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
           />
         </div>

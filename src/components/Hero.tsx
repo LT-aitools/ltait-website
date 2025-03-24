@@ -4,6 +4,7 @@ import SocialLinks from './SocialLinks';
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showContent, setShowContent] = useState(false);
   
   useEffect(() => {
     const heroElement = heroRef.current;
@@ -27,6 +28,12 @@ const Hero = () => {
 
   useEffect(() => {
     setImageLoaded(true);
+    // Show content after 2 seconds (when image is almost done scaling)
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 2000);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -40,7 +47,7 @@ const Hero = () => {
         transition: 'background-position 0.3s ease-out'
       }}
     >
-      <div className="max-container text-center relative z-10 animate-fade-in">
+      <div className="max-container text-center relative z-10">
         <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 ${imageLoaded ? 'scale-100' : 'scale-[2.5]'}`} style={{ transition: 'transform 2500ms ease-in-out' }}>
           <img 
             src="/Main-Illustration.jpg" 
@@ -50,34 +57,36 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-4 bg-gradient-to-r from-hot-pink to-charcoal bg-clip-text text-transparent">
-          Hi, we're Netta and Charlie
-        </h1>
-        
-        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
-          ...just two product gals (and our increasingly opinionated chatbots) exploring Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
-        </p>
-        
-        <SocialLinks 
-          medium="https://medium.com/@letstalkaitools" 
-          github="https://github.com/LT-aitools" 
-          twitter="https://x.com/letstalkaitools" 
-          bluesky="https://bsky.app/letstalkaitools" 
-          linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
-          className="justify-center mb-12"
-        />
-        
-        <div className="animate-float mt-6 flex justify-center w-full">
-          <svg 
-            width="40" 
-            height="40" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-hot-pink"
-          >
-            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+        <div className={`transition-opacity duration-700 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+          <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-4 bg-gradient-to-r from-hot-pink to-charcoal bg-clip-text text-transparent">
+            Hi, we're Netta and Charlie
+          </h1>
+          
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
+            ...just two product gals (and our increasingly opinionated chatbots) exploring Gen AI tools together. We turn creativity and rudimentary coding into weekly AI adventures worth sharing.
+          </p>
+          
+          <SocialLinks 
+            medium="https://medium.com/@letstalkaitools" 
+            github="https://github.com/LT-aitools" 
+            twitter="https://x.com/letstalkaitools" 
+            bluesky="https://bsky.app/letstalkaitools" 
+            linkedin="https://bsky.app/profile/letstalkaitools.bsky.social"
+            className="justify-center mb-12"
+          />
+          
+          <div className="animate-float mt-6 flex justify-center w-full">
+            <svg 
+              width="40" 
+              height="40" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-hot-pink"
+            >
+              <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </div>
       </div>
       
