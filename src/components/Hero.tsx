@@ -1,0 +1,85 @@
+
+import { useEffect, useRef } from 'react';
+import SocialLinks from './SocialLinks';
+
+const Hero = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const heroElement = heroRef.current;
+    if (!heroElement) return;
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const x = clientX / window.innerWidth;
+      const y = clientY / window.innerHeight;
+      
+      heroElement.style.setProperty('--mouse-x', `${x * 100}%`);
+      heroElement.style.setProperty('--mouse-y', `${y * 100}%`);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <section 
+      id="hero" 
+      ref={heroRef}
+      className="min-h-screen flex flex-col justify-center items-center relative"
+      style={{
+        backgroundImage: 'radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), #fff3ed 0%, rgba(255, 243, 237, 0.8) 60%, rgba(224, 164, 134, 0.2) 100%)',
+        backgroundSize: '200% 200%',
+        transition: 'background-position 0.3s ease-out'
+      }}
+    >
+      <div className="max-container text-center relative z-10 animate-fade-in">
+        <div className="w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1">
+          <img 
+            src="/public/lovable-uploads/f26fad48-b87f-45ca-9f75-0d0ab0919d8f.png" 
+            alt="Netta and Charlie" 
+            className="w-full h-full object-cover rounded-full"
+          />
+        </div>
+
+        <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-4 bg-gradient-to-r from-hot-pink to-charcoal bg-clip-text text-transparent">
+          Hi, we're Netta and Charlie
+        </h1>
+        
+        <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-charcoal/90">
+          Welcome to our corner of the internet where we dive into the world of generative AI, 
+          sharing insights, discoveries, and a bit of fun along the way.
+        </p>
+        
+        <SocialLinks 
+          github="https://github.com" 
+          medium="https://medium.com" 
+          twitter="https://twitter.com" 
+          bluesky="https://bsky.app" 
+          linkedin="https://linkedin.com"
+          className="justify-center mb-12"
+        />
+        
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-float">
+          <svg 
+            width="40" 
+            height="40" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-hot-pink"
+          >
+            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-beige/10 to-transparent"></div>
+    </section>
+  );
+};
+
+export default Hero;
