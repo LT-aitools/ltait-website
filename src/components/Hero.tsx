@@ -44,7 +44,7 @@ const Hero = () => {
       <div className="max-container text-center relative z-10 animate-fade-in">
         <div className={`w-40 h-40 mx-auto mb-6 overflow-hidden rounded-full border-4 border-hot-pink/30 shadow-lg bg-white p-1 transition-all duration-1000 ${imageLoaded ? 'scale-100' : 'scale-150'}`}>
           <img 
-            src="/public/lovable-uploads/f26fad48-b87f-45ca-9f75-0d0ab0919d8f.png" 
+            src="/public/images/Main-Illustration.jpg" 
             alt="Netta and Charlie" 
             className="w-full h-full object-cover rounded-full"
             onLoad={() => setImageLoaded(true)}
