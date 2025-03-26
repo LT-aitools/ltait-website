@@ -1,4 +1,3 @@
-
 import { ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -14,10 +13,18 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  // Split the title into main title and person's name
+  const titleMatch = project.title.match(/(.*?)\s*\((.*?)\)$/);
+  const mainTitle = titleMatch ? titleMatch[1].trim() : project.title;
+  const personName = titleMatch ? titleMatch[2] : '';
+
   return (
     <Card className="glass-card hover:shadow-md transition-shadow">
       <CardHeader className="pb-2">
-        <CardTitle className="text-xl">{project.title}</CardTitle>
+        <CardTitle className="text-xl">
+          {mainTitle}
+          {personName && <span className="font-normal"> ({personName})</span>}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <p className="mb-4 text-charcoal/90">{project.description}</p>
