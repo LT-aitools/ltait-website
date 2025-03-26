@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import ProjectSubsection from './projects/ProjectSubsection';
 import { subsections } from './projects/projectsData';
@@ -54,6 +53,8 @@ const ExampleProjects = () => {
           </div>
         </div>
       </div>
+      
+      <div className="h-24 mt-12"></div>
     </section>
   );
 };

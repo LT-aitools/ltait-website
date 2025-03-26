@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import SocialLinks from './SocialLinks';
 
@@ -91,7 +90,6 @@ const Bios = () => {
               Based in Cape Town, Charlie has spent over a decade in early-stage startups across product, design, data, and 
               marketing. When not trying to convince AI to scrape property websites or generate coherent blog posts, she's probably 
               hanging upside down (aerial acrobatics), scuba diving, or planning her next trip (70+ countries and counting!)
-
             </p>
             
             <div className="mt-4">
@@ -103,8 +101,6 @@ const Bios = () => {
           </div>
         </div>
       </div>
-      
-      <div className="h-24 mt-12"></div>
     </section>
   );
 };
