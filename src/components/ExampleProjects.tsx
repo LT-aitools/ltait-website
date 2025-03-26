@@ -1,99 +1,11 @@
+
 import { useState, useEffect, useRef } from 'react';
-import { ExternalLink } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
-// Project type definition
-type Project = {
-  title: string;
-  description: string;
-  links: { text: string; url: string }[];
-};
-
-// Subsection type definition
-type Subsection = {
-  title: string;
-  projects: Project[];
-};
+import ProjectSubsection from './projects/ProjectSubsection';
+import { subsections } from './projects/projectsData';
 
 const ExampleProjects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
-  
-  // Sample data with updated project distribution: 2-6-2
-  const subsections: Subsection[] = [
-    {
-      title: "Content",
-      projects: [
-        {
-          title: "Meeting Video to Content",
-          description: "We take a Google Meet recording (of our 3-hour meeting) and turn it into a blog post (with screenshots & video clips), a thread for X/BlueSky, and a Linkedin post. Tools used: Granola, Claude, Whisper, Python (Pycharm).",
-          links: [
-            { text: "Medium blog post walk-through", url: "#" },
-            { text: "Prompts: Recording analysis", url: "https://docs.google.com/document/d/18lX8vpfq7teqx3ovPdD9rzJzggcvUSOq/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
-            { text: "Prompts: Blog post", url: "https://docs.google.com/document/d/1ieeeRt_Nqr2bGb4rbSpLeGTisdqND7bY/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
-            { text: "Prompts: Social media posts", url: "#" },
-            { text: "Code: Whisper (timestamped transcription)", url: "#" },
-            { text: "Code: Blog post generator", url: "https://docs.google.com/document/d/1gd9GxJsnLeL67H7aY474YaXTWRJeGywJ/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" }
-          ]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        }
-      ]
-    },
-    {
-      title: "Coding",
-      projects: [
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        }
-      ]
-    },
-    {
-      title: "Visual",
-      projects: [
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        },
-        {
-          title: "Title",
-          description: "Description",
-          links: [{ text: "Example link", url: "#" }]
-        }
-      ]
-    }
-  ];
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -130,97 +42,15 @@ const ExampleProjects = () => {
           {/* First column - Content and Visual */}
           <div className="space-y-8">
             {/* Content subsection */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-hot-pink">{subsections[0].title}</h3>
-              
-              {subsections[0].projects.map((project, projectIndex) => (
-                <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-charcoal/90">{project.description}</p>
-                    <ul className="space-y-2">
-                      {project.links.map((link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <a 
-                            href={link.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
-                          >
-                            <ExternalLink size={16} className="mr-1" />
-                            <span>{link.text}</span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ProjectSubsection subsection={subsections[0]} />
             
             {/* Visual subsection */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-hot-pink">{subsections[2].title}</h3>
-              
-              {subsections[2].projects.map((project, projectIndex) => (
-                <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-charcoal/90">{project.description}</p>
-                    <ul className="space-y-2">
-                      {project.links.map((link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <a 
-                            href={link.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
-                          >
-                            <ExternalLink size={16} className="mr-1" />
-                            <span>{link.text}</span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ProjectSubsection subsection={subsections[2]} />
           </div>
           
           {/* Second column - Coding */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-hot-pink">{subsections[1].title}</h3>
-            
-            {subsections[1].projects.map((project, projectIndex) => (
-              <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-charcoal/90">{project.description}</p>
-                  <ul className="space-y-2">
-                    {project.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        <a 
-                          href={link.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
-                        >
-                          <ExternalLink size={16} className="mr-1" />
-                          <span>{link.text}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+            <ProjectSubsection subsection={subsections[1]} />
           </div>
         </div>
       </div>
