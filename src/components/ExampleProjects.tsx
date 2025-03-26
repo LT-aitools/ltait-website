@@ -20,7 +20,7 @@ const ExampleProjects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const projectsRef = useRef<HTMLDivElement>(null);
   
-  // Sample data - replace with real data later
+  // Sample data with updated project distribution: 2-6-2
   const subsections: Subsection[] = [
     {
       title: "Content",
@@ -40,6 +40,26 @@ const ExampleProjects = () => {
     {
       title: "Coding",
       projects: [
+        {
+          title: "Title",
+          description: "Description",
+          links: [{ text: "Example link", url: "#" }]
+        },
+        {
+          title: "Title",
+          description: "Description",
+          links: [{ text: "Example link", url: "#" }]
+        },
+        {
+          title: "Title",
+          description: "Description",
+          links: [{ text: "Example link", url: "#" }]
+        },
+        {
+          title: "Title",
+          description: "Description",
+          links: [{ text: "Example link", url: "#" }]
+        },
         {
           title: "Title",
           description: "Description",
