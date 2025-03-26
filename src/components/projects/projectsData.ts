@@ -1,4 +1,3 @@
-
 import { Subsection } from './ProjectSubsection';
 
 // Sample data with project distribution: 2-6-2
@@ -32,19 +31,20 @@ export const subsections: Subsection[] = [
         title: "Indonesian flashcards web app (Charlie)",
         description: "We drafted a CSV of basic Indonesian vocabulary words for travel and example sentences, and then built a multi-level flashcards game (web app) for studying. The game supports hints, personal mnemonics/notes, and by-category studying/testing, and it runs on a spaced repetition algorithm. Tools used: Claude, ChatGPT, Cursor, Artbreeder, Github Pages / Vercel",
         links: [
-          { text: "Live site", url: "http://flashcards.letstalkaitools.com" }
-          { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/u/0/d/1t0IVXm1H-umeGsu5aVApqnsihVQLHAQubazSNhXTKEA/edit" }
+          { text: "Live site", url: "http://flashcards.letstalkaitools.com" },
+          { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/u/0/d/1t0IVXm1H-umeGsu5aVApqnsihVQLHAQubazSNhXTKEA/edit" },
           { text: "Code: Github repo", url: "https://github.com/LT-aitools/indonesian-flashcards" }
         ]
       },
       {
         title: "Property24 scraper (Charlie)",
-        description: "We scraped a South African property website, to get historical data and new listings for Charlie’s Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
+        description: "We scraped a South African property website, to get historical data and new listings for Charlie's Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
       },
       {
         title: "AI email digest (Netta)",
         description: "We connected to a news API to set up & trigger a daily email digest on AI-related information. Tools used: Claude, Terminal",
+        links: []
       },
       {
         title: "Health & food tracker (Netta)",
@@ -53,14 +53,14 @@ export const subsections: Subsection[] = [
       },
       {
         title: "Wealthfront vs S&P analysis (Charlie)",
-        description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront’s robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
+        description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront's robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Wealthfront-vs-VOO" }]
       },
       {
-        title: "Title",
-        description: "Description",
+        title: "LTAIT website (Charlie)",
+        description: "We created this very website that you’re seeing now. Tools used: Claude, Cursor, Lovable, Artbreeder, Vercel",
         links: [
-          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1SSWqYYkX2C0KgOT2YyWouECFPjW5cbAho9HN9W79IDM/edit?tab=t.0#heading=h.90rf2c8h4v4f" }
+          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1SSWqYYkX2C0KgOT2YyWouECFPjW5cbAho9HN9W79IDM/edit?tab=t.0#heading=h.90rf2c8h4v4f" },
           { text: "Code: Github repo", url: "https://github.com/LT-aitools/ltait-website" }
         ]
       }
@@ -71,16 +71,15 @@ export const subsections: Subsection[] = [
     projects: [
       {
         title: "Duo portraits (Charlie)",
-        description: "We created different AI-generated “duo portraits” of Netta and Charlie together. We wanted a range of both illustrated and photorealistic ones. Tools used: Many (most were terrible) but best were Artbreeder, Faceswapper.io, and Lensa AI. ",
+        description: "We created different AI-generated \"duo portraits\" of Netta and Charlie together. We wanted a range of both illustrated and photorealistic ones. Tools used: Many (most were terrible) but best were Artbreeder, Faceswapper.io, and Lensa AI. ",
         links: [{ text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit?usp=sharing" }]
       },
       {
-        title: "Children’s book (Charlie)",
-        description: "We created an illustrated children’s book featuring Charlie’s niece Zoe and a stuffed animal cheetah (Zoe’s favorite animal). Tools used: ChatGPT, Readkidz (also tried other tools that were worse)",
+        title: "Children's book (Charlie)",
+        description: "We created an illustrated children's book featuring Charlie's niece Zoe and a stuffed animal cheetah (Zoe's favorite animal). Tools used: ChatGPT, Readkidz (also tried other tools that were worse)",
         links: [
-          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/u/0/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit" }
-          { text: "Final book (as PDF)", url: "https://drive.google.com/file/d/1EHjYaq3nb2wPOZriUNxSbZJ3iKFqhGpq/view?usp=sharing\" }
-
+          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/u/0/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit" },
+          { text: "Final book (as PDF)", url: "https://drive.google.com/file/d/1EHjYaq3nb2wPOZriUNxSbZJ3iKFqhGpq/view?usp=sharing" }
         ]
       }
     ]
