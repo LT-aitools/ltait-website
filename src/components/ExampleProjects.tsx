@@ -120,12 +120,14 @@ const ExampleProjects = () => {
       >
         <h2 className="section-title mb-12">Example Projects and Links</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {subsections.map((subsection, index) => (
-            <div key={index} className="space-y-6">
-              <h3 className="text-2xl font-bold text-hot-pink">{subsection.title}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* First column - Content and Visual */}
+          <div className="space-y-8">
+            {/* Content subsection */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-hot-pink">{subsections[0].title}</h3>
               
-              {subsection.projects.map((project, projectIndex) => (
+              {subsections[0].projects.map((project, projectIndex) => (
                 <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-xl">{project.title}</CardTitle>
@@ -151,7 +153,69 @@ const ExampleProjects = () => {
                 </Card>
               ))}
             </div>
-          ))}
+            
+            {/* Visual subsection */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-hot-pink">{subsections[2].title}</h3>
+              
+              {subsections[2].projects.map((project, projectIndex) => (
+                <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mb-4 text-charcoal/90">{project.description}</p>
+                    <ul className="space-y-2">
+                      {project.links.map((link, linkIndex) => (
+                        <li key={linkIndex}>
+                          <a 
+                            href={link.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
+                          >
+                            <ExternalLink size={16} className="mr-1" />
+                            <span>{link.text}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+          
+          {/* Second column - Coding */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-hot-pink">{subsections[1].title}</h3>
+            
+            {subsections[1].projects.map((project, projectIndex) => (
+              <Card key={projectIndex} className="glass-card hover:shadow-md transition-shadow">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-charcoal/90">{project.description}</p>
+                  <ul className="space-y-2">
+                    {project.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a 
+                          href={link.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
+                        >
+                          <ExternalLink size={16} className="mr-1" />
+                          <span>{link.text}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
