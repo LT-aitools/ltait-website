@@ -37,6 +37,15 @@ export const subsections: Subsection[] = [
         ]
       },
       {
+        title: "The Great Heaven Census (Charlie)",
+        description: "A speculative interactive model (web app) that allows users to estimate the human and canine population of heaven, by choosing a Western religious doctrine, adjudicating on some theological edge cases, and deciding whether all or only good dogs go to heaven. Data is as accurate as possible. (Also: find the dog party easter egg.) Tools used: ChatGPT, Perplexity, Lovable, Cursor, Supabase, Vercel",
+        links: [
+          { text: "Live site", url: "http://heaven.letstalkaitools.com" },
+          { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/d/122FS8fF0EVYA9u7nkY5W-nld5GRT60DTR8bvcD-AFOw/edit?usp=sharing" },
+          { text: "Code: Github repo", url: "https://github.com/LT-aitools/heavenly-paw-ponder" }
+        ]
+      },
+      {
         title: "Property24 scraper (Charlie)",
         description: "We scraped a South African property website, to get historical data and new listings for Charlie's Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
