@@ -32,14 +32,26 @@ export const useMediumFeed = () => {
           throw new Error('No items returned from RSS feed');
         }
         
-        const parsedPosts = data.items.map((item: any) => ({
-          title: item.title || '',
-          link: item.link || '#',
-          pubDate: item.pubDate || '',
-          description: item.description 
-            ? item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...'
-            : ''
-        }));
+        const parsedPosts = data.items.map((item: any) => {
+          // Create a temporary div to parse the HTML content
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = item.content;
+          
+          // Get all paragraphs
+          const paragraphs = tempDiv.getElementsByTagName('p');
+          // Get the second paragraph if it exists, otherwise use the first one or empty string
+          const secondParagraph = paragraphs.length > 1 ? paragraphs[1].textContent : 
+                                paragraphs.length > 0 ? paragraphs[0].textContent : '';
+          
+          return {
+            title: item.title || '',
+            link: item.link || '#',
+            pubDate: item.pubDate || '',
+            description: secondParagraph 
+              ? secondParagraph.substring(0, 150) + '...'
+              : ''
+          };
+        });
         
         setPosts(parsedPosts.slice(0, 4)); // Get the latest 4 posts
         setLoading(false);
