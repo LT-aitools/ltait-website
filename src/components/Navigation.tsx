@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -35,6 +34,7 @@ const Navigation = () => {
           <a href="#about" className="nav-link">About</a>
           <a href="#blog" className="nav-link">Blog</a>
           <a href="#who" className="nav-link">Who We Are</a>
+          <a href="#example-projects" className="nav-link">Projects</a>
         </nav>
         <button className="md:hidden p-2 text-charcoal rounded-md">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">

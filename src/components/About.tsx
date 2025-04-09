@@ -49,8 +49,11 @@ const About = () => {
           </p>
           
           <p className="text-lg mb-6">
-            We document it all—transforming our chaotic experiments into blogs and videos (using AI, naturally)—
+            We document it all, transforming our chaotic experiments into blogs and videos (using AI, naturally)—
             so that (1) we remember what we did 😅, and (2) hopefully you can learn from our stumbles.
+          </p>
+          <p className="text-lg mb-6">
+            View <a href="#example-projects" className="text-blue-500 hover:underline">our projects list here</a>.
           </p>
           
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
