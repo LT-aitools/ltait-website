@@ -80,7 +80,7 @@ export const subsections: Subsection[] = [
     projects: [
       {
         title: "SA Daily News Podcast (Charlie)",
-        description: "We built a Github workflow to pull from South African RSS news feeds and scrape newsletters, then a podcast transcript using Gemini API, and finally turn that into an mp3 with the Azure Speech API. We submitted the RSS feed to the primary podcast platforms, so it's searchable on most podcast apps Tools used: Claude, Cursor, Azure Speech, Pixabay, Vercel",
+        description: "We built a Github workflow to pull from South African RSS news feeds and scrape newsletters, use that data to write a podcast transcript using Gemini API, and finally turn that into an mp3 with the Azure Speech API. Finally, we (manually) submitted the RSS feed link to podcast platforms, so it's searchable on most podcast apps. Tools used: Claude, Cursor, Azure Speech, Pixabay, Vercel",
         links: [
           { text: "Podcast website (stream an episode!)", url: "mzansi-podcast.letstalkaitools.com" },
           { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1FLUfPBhjS8Ymz834HkERXYXsqwcKeHizboMjUy4tE8Q/edit?usp=sharing" },
