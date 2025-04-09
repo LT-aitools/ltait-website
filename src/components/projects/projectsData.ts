@@ -98,7 +98,7 @@ export const subsections: Subsection[] = [
         description: "We created an illustrated children's book featuring Charlie's niece Zoe and a stuffed animal cheetah (Zoe's favorite animal). Tools used: ChatGPT, Readkidz (also tried other tools that were worse)",
         links: [
           { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/u/0/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit" },
-          { text: "Final book (as PDF)", url: "https://drive.google.com/file/d/1EHjYaq3nb2wPOZriUNxSbZJ3iKFqhGpq/view?usp=sharing" }
+          { text: "Final book (as Kindle ebook!)", url: "https://www.amazon.com/dp/B0F38GJFQC" }
         ]
       }
     ]
