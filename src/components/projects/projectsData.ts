@@ -28,15 +28,6 @@ export const subsections: Subsection[] = [
     title: "Coding",
     projects: [
       {
-        title: "Indonesian flashcards web app (Charlie)",
-        description: "We drafted a CSV of basic Indonesian vocabulary words for travel and example sentences, and then built a multi-level flashcards game (web app) for studying. The game supports hints, personal mnemonics/notes, and by-category studying/testing, and it runs on a spaced repetition algorithm. Tools used: Claude, ChatGPT, Cursor, Artbreeder, Github Pages / Vercel",
-        links: [
-          { text: "Live site", url: "http://flashcards.letstalkaitools.com" },
-          { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/u/0/d/1t0IVXm1H-umeGsu5aVApqnsihVQLHAQubazSNhXTKEA/edit" },
-          { text: "Code: Github repo", url: "https://github.com/LT-aitools/indonesian-flashcards" }
-        ]
-      },
-      {
         title: "The Great Heaven Census (Charlie)",
         description: "A speculative interactive model (web app) that allows users to estimate the human and canine population of heaven, by choosing a Western religious doctrine, adjudicating on some theological edge cases, and deciding whether all or only good dogs go to heaven. Data is as accurate as possible. (Also: find the dog party easter egg.) Tools used: ChatGPT, Perplexity, Lovable, Cursor, Supabase, Vercel",
         links: [
@@ -64,6 +55,15 @@ export const subsections: Subsection[] = [
         title: "Wealthfront vs S&P analysis (Charlie)",
         description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront's robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Wealthfront-vs-VOO" }]
+      },
+      {
+        title: "Indonesian flashcards web app (Charlie)",
+        description: "We drafted a CSV of basic Indonesian vocabulary words for travel and example sentences, and then built a multi-level flashcards game (web app) for studying. The game supports hints, personal mnemonics/notes, and by-category studying/testing, and it runs on a spaced repetition algorithm. Tools used: Claude, ChatGPT, Cursor, Artbreeder, Github Pages / Vercel",
+        links: [
+          { text: "Live site", url: "http://flashcards.letstalkaitools.com" },
+          { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/u/0/d/1t0IVXm1H-umeGsu5aVApqnsihVQLHAQubazSNhXTKEA/edit" },
+          { text: "Code: Github repo", url: "https://github.com/LT-aitools/indonesian-flashcards" }
+        ]
       },
       {
         title: "LTAIT website (Charlie)",
