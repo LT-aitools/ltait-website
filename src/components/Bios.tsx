@@ -58,7 +58,7 @@ const Bios = () => {
               Based in Tel Aviv, Netta brings her background in digital health, 
               patient engagement platforms, and a deep appreciation for human-centered design to 
               our AI adventures. When not debugging code she didn't write, she's organizing women's 
-              health conferences or speaking multiple languages (sometimes to the AI, with varying results).
+              events, running, or speaking multiple languages (sometimes to the AI, with varying results).
             </p>
             
             <div className="mt-4">
