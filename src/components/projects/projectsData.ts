@@ -37,6 +37,20 @@ export const subsections: Subsection[] = [
         ]
       },
       {
+        title: "Vaginal Discharge Analyzer (Netta)",
+        description: "A web application that helps women analyze vaginal discharge patterns for health monitoring and awareness. The tool provides educational information and assessment features. Tools used: Base44, Claude",
+        links: [
+          { text: "Live site", url: "https://app--women-health-assistant-72fe3b01.base44.app" }
+        ]
+      },
+      {
+        title: "Montessori Games Creator (Netta)",
+        description: "An interactive platform for creating and accessing Montessori-inspired educational games and activities. The tool helps parents and educators develop customized learning materials. Tools used: GeminiAPI, Lovable, Cursor, Claude",
+        links: [
+          { text: "Live site", url: "https://montessorigames.letstalkaitools.com/" }
+        ]
+      },
+      {
         title: "Property24 scraper (Charlie)",
         description: "We scraped a South African property website, to get historical data and new listings for Charlie's Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
@@ -63,14 +77,6 @@ export const subsections: Subsection[] = [
           { text: "Live site", url: "http://flashcards.letstalkaitools.com" },
           { text: "Project file (including prompts, screenshots)", url: "https://docs.google.com/document/u/0/d/1t0IVXm1H-umeGsu5aVApqnsihVQLHAQubazSNhXTKEA/edit" },
           { text: "Code: Github repo", url: "https://github.com/LT-aitools/indonesian-flashcards" }
-        ]
-      },
-      {
-        title: "LTAIT website (Charlie)",
-        description: "We created this very website that you're seeing now. Tools used: Claude, Cursor, Lovable, Artbreeder, Vercel",
-        links: [
-          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1SSWqYYkX2C0KgOT2YyWouECFPjW5cbAho9HN9W79IDM/edit?tab=t.0#heading=h.90rf2c8h4v4f" },
-          { text: "Code: Github repo", url: "https://github.com/LT-aitools/ltait-website" }
         ]
       }
     ]
