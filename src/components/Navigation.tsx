@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,6 +19,14 @@ const Navigation = () => {
     };
   }, [scrolled]);
 
+  const navLinks = [
+    { href: '#hero', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#who', label: 'Who We Are' },
+    { href: '#example-projects', label: 'Projects' },
+  ];
+
   return (
     <header 
       className={cn(
@@ -30,17 +39,34 @@ const Navigation = () => {
           <img src="LTAIT-Logo_plain.png" alt="Let's Talk AI Tools Logo" className="h-8 w-auto" />
         </a>
         <nav className="hidden md:flex space-x-1">
-          <a href="#hero" className="nav-link">Home</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#blog" className="nav-link">Blog</a>
-          <a href="#who" className="nav-link">Who We Are</a>
-          <a href="#example-projects" className="nav-link">Projects</a>
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} className="nav-link">
+              {link.label}
+            </a>
+          ))}
         </nav>
-        <button className="md:hidden p-2 text-charcoal rounded-md">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <button className="md:hidden p-2 text-charcoal rounded-md hover:bg-white/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] bg-white/95 backdrop-blur-md">
+            <nav className="flex flex-col space-y-4 mt-8">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.href} 
+                  href={link.href} 
+                  className="text-lg font-medium text-charcoal hover:text-hot-pink transition-colors py-2 border-b border-gray-100 last:border-b-0"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );
