@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,10 @@ const Navigation = () => {
     { href: '#example-projects', label: 'Projects' },
   ];
 
+  const handleNavLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header 
       className={cn(
@@ -45,7 +50,7 @@ const Navigation = () => {
             </a>
           ))}
         </nav>
-        <Sheet>
+        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild>
             <button className="md:hidden p-2 text-charcoal rounded-md hover:bg-white/20 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -56,13 +61,15 @@ const Navigation = () => {
           <SheetContent side="right" className="w-[300px] bg-white/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4 mt-8">
               {navLinks.map((link) => (
-                <a 
-                  key={link.href} 
-                  href={link.href} 
-                  className="text-lg font-medium text-charcoal hover:text-hot-pink transition-colors py-2 border-b border-gray-100 last:border-b-0"
-                >
-                  {link.label}
-                </a>
+                <SheetClose asChild key={link.href}>
+                  <a 
+                    href={link.href} 
+                    className="text-lg font-medium text-charcoal hover:text-hot-pink transition-colors py-2 border-b border-gray-100 last:border-b-0"
+                    onClick={handleNavLinkClick}
+                  >
+                    {link.label}
+                  </a>
+                </SheetClose>
               ))}
             </nav>
           </SheetContent>
