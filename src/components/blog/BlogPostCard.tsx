@@ -1,5 +1,6 @@
 
 import { FC } from 'react';
+import he from 'he';
 
 type BlogPostCardProps = {
   title: string;
@@ -26,7 +27,7 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ title, link, pubDate, description
       className="glass-card p-6 hover:shadow-md transition-all duration-300 flex flex-col h-full group border-beige"
     >
       <span className="text-sm text-beige/80 mb-2">{formatDate(pubDate)}</span>
-      <h3 className="text-xl font-bold mb-2 group-hover:text-hot-pink transition-colors duration-300">{title}</h3>
+      <h3 className="text-xl font-bold mb-2 group-hover:text-hot-pink transition-colors duration-300">{he.decode(title)}</h3>
       <p className="text-charcoal/80 flex-grow">{description}</p>
       <span className="mt-4 inline-flex items-center text-hot-pink">
         Read more
