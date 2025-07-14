@@ -155,7 +155,7 @@ const Privacy = () => {
                       If you have any questions about this Privacy Policy or our data practices, please contact us:
                     </p>
                     <div className="mt-4 space-y-2 text-charcoal/80">
-                      <p>Email: <a href="mailto:privacy@letstalkaitools.com" className="text-hot-pink hover:text-hot-pink/80 transition-colors">privacy@letstalkaitools.com</a></p>
+                      <p>Email: <a href="mailto:hello@letstalkaitools.com" className="text-hot-pink hover:text-hot-pink/80 transition-colors">hello@letstalkaitools.com</a></p>
                       <p>Website: <a href="https://www.letstalkaitools.com" className="text-hot-pink hover:text-hot-pink/80 transition-colors">www.letstalkaitools.com</a></p>
                     </div>
                   </section>
