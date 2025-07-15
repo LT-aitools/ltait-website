@@ -15,10 +15,10 @@ const Privacy = () => {
         <section className="bg-white py-16 md:py-24">
           <div className="max-container">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold mb-8 text-charcoal">Privacy Policy</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-charcoal m-0">Privacy Policy</h1>
               
-              <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-charcoal/80 mb-8">
+              <div className="max-w-none">
+                <p className="text-lg text-charcoal/80 m-0">
                   <strong>Last updated:</strong> {new Date().toLocaleDateString('en-US', { 
                     year: 'numeric', 
                     month: 'long', 
@@ -26,22 +26,22 @@ const Privacy = () => {
                   })}
                 </p>
 
-                <div className="space-y-8">
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Introduction</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                <div>
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Introduction</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       Let's Talk AI Tools ("we," "our," or "us") is committed to protecting your privacy. 
                       This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
                       when you visit our website at www.letstalkaitools.com.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Information We Collect</h2>
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Information We Collect</h2>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-xl font-semibold mb-2 text-charcoal">Personal Information</h3>
-                        <p className="text-charcoal/80 leading-relaxed">
+                        <h3 className="text-xl font-semibold text-charcoal mb-2">Personal Information</h3>
+                        <p className="text-charcoal/80 leading-relaxed m-0">
                           We may collect personal information that you voluntarily provide to us when you:
                         </p>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-charcoal/80">
@@ -53,8 +53,8 @@ const Privacy = () => {
                       </div>
                       
                       <div>
-                        <h3 className="text-xl font-semibold mb-2 text-charcoal">Automatically Collected Information</h3>
-                        <p className="text-charcoal/80 leading-relaxed">
+                        <h3 className="text-xl font-semibold text-charcoal mb-2">Automatically Collected Information</h3>
+                        <p className="text-charcoal/80 leading-relaxed m-0">
                           When you visit our website, we automatically collect certain information about your device, including:
                         </p>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-charcoal/80">
@@ -68,9 +68,9 @@ const Privacy = () => {
                     </div>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">How We Use Your Information</h2>
-                    <p className="text-charcoal/80 leading-relaxed mb-4">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">How We Use Your Information</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       We use the information we collect to:
                     </p>
                     <ul className="list-disc list-inside space-y-1 text-charcoal/80">
@@ -83,18 +83,18 @@ const Privacy = () => {
                     </ul>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Cookies and Tracking Technologies</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Cookies and Tracking Technologies</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       We use cookies and similar tracking technologies to enhance your browsing experience. 
                       These technologies help us understand how you use our website and improve our services. 
                       You can control cookie settings through your browser preferences.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Third-Party Services</h2>
-                    <p className="text-charcoal/80 leading-relaxed mb-4">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Third-Party Services</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       Our website may contain links to third-party services, including:
                     </p>
                     <ul className="list-disc list-inside space-y-1 text-charcoal/80">
@@ -103,23 +103,23 @@ const Privacy = () => {
                       <li>Social media platforms (Twitter/X, Bluesky, LinkedIn)</li>
                       <li>Analytics services</li>
                     </ul>
-                    <p className="text-charcoal/80 leading-relaxed mt-4">
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       These third-party services have their own privacy policies, and we encourage you to review them.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Data Security</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Data Security</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       We implement appropriate security measures to protect your personal information against 
                       unauthorized access, alteration, disclosure, or destruction. However, no method of 
                       transmission over the internet is 100% secure, and we cannot guarantee absolute security.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Your Rights</h2>
-                    <p className="text-charcoal/80 leading-relaxed mb-4">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Your Rights</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       Depending on your location, you may have certain rights regarding your personal information:
                     </p>
                     <ul className="list-disc list-inside space-y-1 text-charcoal/80">
@@ -131,30 +131,30 @@ const Privacy = () => {
                     </ul>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Children's Privacy</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Children's Privacy</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       Our website is not intended for children under 13 years of age. We do not knowingly 
                       collect personal information from children under 13. If you are a parent or guardian 
                       and believe your child has provided us with personal information, please contact us.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Changes to This Privacy Policy</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Changes to This Privacy Policy</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       We may update this Privacy Policy from time to time. We will notify you of any changes 
                       by posting the new Privacy Policy on this page and updating the "Last updated" date. 
                       We encourage you to review this Privacy Policy periodically.
                     </p>
                   </section>
 
-                  <section>
-                    <h2 className="text-2xl font-bold mb-4 text-charcoal">Contact Us</h2>
-                    <p className="text-charcoal/80 leading-relaxed">
+                  <section className="mt-8">
+                    <h2 className="text-2xl font-bold text-charcoal mb-2">Contact Us</h2>
+                    <p className="text-charcoal/80 leading-relaxed m-0">
                       If you have any questions about this Privacy Policy or our data practices, please contact us:
                     </p>
-                    <div className="mt-4 space-y-2 text-charcoal/80">
+                    <div className="text-charcoal/80">
                       <p>Email: <a href="mailto:hello@letstalkaitools.com" className="text-hot-pink hover:text-hot-pink/80 transition-colors">hello@letstalkaitools.com</a></p>
                       <p>Website: <a href="https://www.letstalkaitools.com" className="text-hot-pink hover:text-hot-pink/80 transition-colors">www.letstalkaitools.com</a></p>
                     </div>

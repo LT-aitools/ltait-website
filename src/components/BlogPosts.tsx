@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Rss } from 'lucide-react';
 import BlogGrid from './blog/BlogGrid';
 import { useMediumFeed } from './blog/useMediumFeed';
+import he from 'he';
 
 const BlogPosts = () => {
   const [isVisible, setIsVisible] = useState(false);
