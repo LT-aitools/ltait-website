@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+// Test comment to verify Vercel deployment
 const PrivacyFeministNewsletter = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
