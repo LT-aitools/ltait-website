@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # Built files (for deployment)
-index.html
+# index.html
 404.html
 assets/
 *.png
