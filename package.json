@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "deploy:main": "npm run build && cp -r dist/* . && git add . && git commit -m 'Deploy to main branch' && git push origin main"
+    "deploy:main": "./deploy.sh"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
