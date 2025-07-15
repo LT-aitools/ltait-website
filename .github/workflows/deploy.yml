@@ -1,18 +1,22 @@
 name: Deploy to GitHub Pages
 
+# Disabled to avoid conflicts with Vercel deployment
+# on:
+#   push:
+#     branches: [ main ]
+#     paths-ignore:
+#       - 'dist/**'
+#       - 'assets/**'
+#       - '*.html'
+#       - '*.png'
+#       - '*.jpg'
+#       - '*.ico'
+#       - '*.svg'
+#       - 'robots.txt'
+#   workflow_dispatch:
+
 on:
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - 'dist/**'
-      - 'assets/**'
-      - '*.html'
-      - '*.png'
-      - '*.jpg'
-      - '*.ico'
-      - '*.svg'
-      - 'robots.txt'
-  workflow_dispatch:
+  workflow_dispatch: # Only manual triggers allowed
 
 permissions:
   contents: write
