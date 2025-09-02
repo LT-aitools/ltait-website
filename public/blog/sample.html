@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Hidden Blog Post</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #494747;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            color: #e64964;
+            border-bottom: 2px solid #e64964;
+            padding-bottom: 0.5rem;
+        }
+        .meta {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        a {
+            color: #e64964;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #e64964;
+            color: white;
+            border-radius: 8px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #d13d56;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>This is a Hidden Blog Post</h1>
+        <div class="meta">Posted on: December 2024 | Category: Hidden</div>
+        
+        <p>This is a sample hidden blog post that demonstrates how you can drop HTML files into the <code>public/blog/</code> directory and they'll be accessible at <code>/blog/filename</code> (without the .html extension).</p>
+        
+        <p>You can:</p>
+        <ul>
+            <li>Add any HTML content you want</li>
+            <li>Include your own CSS styling</li>
+            <li>Embed videos, images, or other content</li>
+            <li>Create completely custom layouts</li>
+        </ul>
+        
+        <p>This route is not linked anywhere on your main site, so it's truly hidden unless someone knows the URL.</p>
+        
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>

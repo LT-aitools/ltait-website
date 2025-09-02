@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import PrivacyFeministNewsletter from "./pages/PrivacyFeministNewsletter";
-
+import BlogPost from "./pages/BlogPost";
 
 
 const queryClient = new QueryClient();
@@ -22,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/privacyfeministnewsletter" element={<PrivacyFeministNewsletter />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
