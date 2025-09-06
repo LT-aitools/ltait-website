@@ -32,7 +32,7 @@ export const useMediumFeed = () => {
           throw new Error('No items returned from RSS feed');
         }
         
-        const parsedPosts = data.items.map((item: any) => {
+        const parsedPosts = data.items.map((item: { title?: string; link?: string; pubDate?: string; content?: string }) => {
           // Create a temporary div to parse the HTML content
           const tempDiv = document.createElement('div');
           tempDiv.innerHTML = item.content;

@@ -1,410 +1,404 @@
 
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                line-height: 1.6;
-                color: #333;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-            }
 
-            p {
-                margin: 0.7em 0;
-            }
+<style>
+body {
+ font-family: system-ui, -apple-system, sans-serif;
+ line-height: 1.6;
+ color: #333;
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 2rem 1rem;
+}
 
-            em {
-                font-style: italic;
-            }
+h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 2rem 0; }
+h2 { font-size: 2rem; font-weight: 700; margin: 3rem 0 1.5rem 0; }
+h3 { font-size: 1.4rem; font-weight: 600; margin: 2rem 0 1rem 0; }
+p { margin: 1.2rem 0; }
+ul { margin: 1.2rem 0; padding-left: 2rem; list-style-type: disc !important; }
+li { margin: 0.5rem 0; list-style-type: disc !important; display: list-item !important; }
 
-            strong {
-                font-weight: bold;
-            }
+.media-container {
+ margin: 2rem 0;
+ text-align: center;
+ background: transparent;
+ border-radius: 8px;
+ padding: 1rem;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-            /* Header styling to match markdown formatting */
-            h1, h2, h3, h4, h5, h6 {
-                margin-top: 1.5em;
-                margin-bottom: 0.5em;
-                font-weight: bold;
-            }
+.media-container img, .media-container video {
+ max-width: 100%;
+ height: auto;
+ border-radius: 8px;
+}
 
-            h1 {
-                font-size: 2em;
-            }
+.section-separator {
+ text-align: center;
+ font-size: 1.5rem;
+ letter-spacing: 0.5rem;
+ margin: 5rem 0;
+ color: #666;
+ opacity: 0.6;
+}
 
-            h2 {
-                font-size: 1.5em;
-            }
+ul li {
+ list-style: disc !important;
+ display: list-item !important;
+ margin-left: 0 !important;
+}
 
-            h3 {
-                font-size: 1.2em;
-            }
+.blog-content ul {
+ list-style-type: disc !important;
+ padding-left: 2rem !important;
+}
 
-            h4 {
-                font-size: 1.1em;
-            }
+.blog-content li {
+ list-style: disc !important;
+ display: list-item !important;
+}
+</style>
 
-            h5 {
-                font-size: 1em;
-            }
+<h1><strong>Week 19:</strong> From Code Animation to AI Research - Testing Tools Across Creative and Technical Domains</h1>
 
-            h6 {
-                font-size: 0.9em;
-            }
+<p style="font-style: italic; color: #666; margin-bottom: 2rem;">Published on January 6, 2025</p>
 
-            /* Lists styling */
-            ul, ol {
-                margin: 1em 0;
-                padding-left: 2em;
-            }
+<p>This week we explored a diverse range of creative and technical challenges, from animating logos with code to testing character consistency in AI image generation. We dove deep into browser automation, practical email solutions, design systems, and academic research tools, discovering how different AI tools excel in their specialized domains.</p>
 
-            li {
-                margin-bottom: 0.5em;
-            }
+<h2>SVG Logo Animation with Cursor</h2>
 
-            /* Override default list counter styles */
-            ol.preserve-numbers {
-                counter-reset: none;
-            }
+<p>Inspired by a podcast mention about Trello's animated favicons, we decided to test whether Cursor could animate our company logo.</p>
 
-            ol.preserve-numbers > li {
-                list-style: none;
-                position: relative;
-            }
+<h3>The Challenge</h3>
 
-            ol.preserve-numbers > li::before {
-                content: attr(value) ".";
-                position: absolute;
-                left: -2em;
-                width: 1.5em;
-                text-align: right;
-            }
+<p>After hearing about how Trello animates their favicons and how a designer wanted to recreate similar animations after losing original files, we wanted to see if Cursor could animate our SVG logo.</p>
 
-            /* Nested lists */
-            li > ul, li > ol {
-                margin-top: 0.5em;
-            }
+<h3>Our Discovery</h3>
 
-            figure {
-                margin: 1.5em auto;
-                text-align: center;
-            }
+<p>We initially didn't know that SVGs could be animated with code - we thought you could only make animated GIFs.</p>
 
-            figure.align-left {
-                float: left;
-                margin-right: 20px;
-                margin-bottom: 10px;
-                text-align: left;
-            }
-
-            figure.align-right {
-                float: right;
-                margin-left: 20px;
-                margin-bottom: 10px;
-                text-align: right;
-            }
-
-            figure.align-center {
-                clear: both;
-                text-align: center;
-            }
-
-            /* Width classes */
-            figure.width-50 {
-                max-width: 50%;
-            }
-
-            figure.width-70 {
-                max-width: 70%;
-            }
-
-            figure img, figure video {
-                max-width: 100%;
-                height: auto;
-                border-radius: 4px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-
-            figcaption {
-                color: #666;
-                font-size: 0.9em;
-                margin-top: 0.5em;
-                font-style: italic;
-            }
-
-            /* Clear floats after figures */
-            .clearfix::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-        </style>
-        
-<h1>Week 19: From Logo Animations to Literature Reviews - AI Tools Get Specialized</h1>
-
-<p><em>The following blog post was written by Claude, based on a recording of our weekly meeting transcribed by Whisper, notes taken by Granola.</em></p>
-
-<h2><strong>At a Glance: Projects Explored This Week</strong></h2>
-
-<p>• <strong>Logo Animation with Cursor</strong> (Charlie) - SVG animation creation in minutes</p>
-<p>• <strong>Midjourney Brand & Creative Experiments</strong> (Charlie, Netta) - Logo masking, mascot creation, and photorealistic video generation</p>
-<p>• <strong>Browserbase MCP Testing</strong> (Netta) - Automated web testing with confidence issues</p>
-<p>• <strong>Event Newsletter Calendar Automation</strong> (Netta) - Google Apps Script for event extraction</p>
-<p>• <strong>Component Library Prototyping</strong> (Charlie) - v0 design system extraction from screenshots</p>
-<p>• <strong>Research Literature Review Tool Comparison</strong> (Netta) - Academic research automation across multiple platforms</p>
-
-<h2><strong>Animate Your Logo, in Under 3 Minutes</strong></h2>
-
-<p><strong>The Goal:</strong> Create an animated version of our company logo for social media and presentations. We needed something quick and professional without diving into complex animation software or hiring a designer.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Uploaded our SVG logo to Cursor</strong> and simply asked: "Here's my logo. I want to create an animation where the dots/circles first appear randomly (not left to right), then the lines are drawn from top to bottom. I want this animation to last one second total."</li>
-
-<p></ol></p>
-<p>The magic happened almost instantly. Cursor understood exactly what we wanted and generated the SVG animation code in three attempts. The first animation went too fast (it turns out 1 sec is too little?), and the second started with elements already visible instead of a blank slate that gradually revealed the logo, but then came attempt three. Boom: perfect, three-second animation with dots appearing randomly, followed by lines drawing top to bottom.</p>
-
-<p></ul></p>
-<p>[SCREENSHOT timestamp="00:16:53"] <em>The final animated logo showing the dot-then-line sequence</em></p>
-
-<p><strong>Breakthrough Moment:</strong> Realizing you can animate SVGs directly through code generation. This opens up possibilities for quick brand asset creation that we'd never considered.</p>
-
-<p><strong>Challenges & AI Failures:</strong> Minimal issues - just needed to specify that the animation should start from a blank state rather than partially populated.</p>
-
-<p><strong>Final Verdict:</strong> A (Lightning fast, professional result, demonstrates untapped potential for brand animation work)</p>
-
-<h2><strong>Midjourney Makes Brand Adjustments Easy</strong></h2>
-
-<p><strong>The Goal:</strong> Explore two different creative applications - brand-related work for actual business use, and general creative experimentation with video generation.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<h3><strong>Brand Applications</strong></h3>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Logo Masking for Holidays:</strong> We wanted to experiment with creating "vacation mode" versions of our logo, that a company might put up to say: "Happy [insert holiday]" or or "We're on vacation; Be back on [date]!" Since Charlie had two big holidays planned (scuba diving in Indonesia; and gorilla tracking in Uganda), we went with those themes.</li>
-
-<p></ol></p>
-<p>To do this, we different AI tools: Playground AI (poor results), Stable Diffusion (text-to-image only), Midjourney ($9/month, most effective). Using Midjourney, we successfully created holiday mask variations by starting with "edit" mode, uploading our logo, and then using "retexture" to transform it. We created 2 holiday variations - islands surrounded by coral reef, and jungle themes with primates.</p>
-
-<p></ul></p>
-<p>[CLIP timestamp="00:22:15" duration="45"] <em>Demonstrating the edit mode retexture process</em></p>
-
-<p>The results weren't always literal (we asked for "logo as island surrounded by coral reef" and got something more abstract), but they were usable and on-brand. Way better (and faster!) than anything we could create manually, as non-illustrators.</p>
-
-<ol class="preserve-numbers">
-<li value="2"><strong>Mascot Creation and Animation:</strong> Many brands have cartoonish mascots that enable the company to show its personality. LTAIT didn't have one, so we experimented with using Midjourney to create one.</li>
-
-<p></ol></p>
-<p>We first asked ChatGPT to come up with some mascot concepts (animals and visual themes), and then threw those into Midjourney. In this way, we generated a platypus mascot concept in multiple styles - retro cartoon, steampunk, cyberpunk. We also were able to test Midjourneys' recently released "animate" feature, to create a short video featuring our new mascot.</p>
-
-<p></ul></p>
-<p>[SCREENSHOT timestamp="00:25:59"] <em>Four platypus mascot variations showing consistent character features</em></p>
-
-<ol class="preserve-numbers">
-<li value="3"><strong>Character Consistency Testing:</strong> Used existing mascot "Cheeto" from a previous project (the children's book), uploaded as style reference, and created birthday scenes. The spot patterns remained identical across all variations - genuinely impressive character consistency. The key discovery here was <strong>temperature controls</strong>: setting it to 400 means exact same character consistency, while 10 gives you only generally similar characters.</li>
-
-</ol>
-<h3><strong>Creative Video Generation</strong></h3>
-
+<h3>Implementation Process</h3>
+<ul>
+ <li>Dropped our existing SVG logo directly into Cursor</li>
+ <li>Provided specific requirements: "I want to create an animation whereby the dots are circles, first appear randomly. So not left to right. And then the lines are drawn from top to bottom. I want this animation to last one second total."</li>
+ <li>The first attempt was too fast</li>
+ <li>The second attempt didn't start from scratch (it was already partially populated)</li>
+ <li>Made adjustments and got it working on attempt 3</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="1"><strong>Photorealistic Videos:</strong> Since we hadn't tested Midjourney before, we wanted to play around more with its video capabilities. We started with an existing video prompt from Midjourney's explore section (Japanese anime style), then modified it to create a 3-year-old girl running on the beach. The level of detail was surprising - brown hair with blonde streaks, pink outfit, motion blur for speed.</li>
 
-</ol>
-<ol class="preserve-numbers">
-<li value="2"><strong>Style Transformations:</strong> Changed the same scene from Japanese anime style to Monet painting style mid-sequence. The character remained recognizable while the artistic style completely transformed.</li>
+<div class="media-container"><img src="/blog/media/Week 19 - 00:17:04 - Character Creation 1.jpg" alt="Screenshot at 00:17:04"></div>
 
-<p></ol></p>
-<p>[CLIP timestamp="00:31:29" duration="50"] <em>Video generation showing the running animation and some variations</em></p>
+<h3>Results</h3>
 
+<p>The animation worked as requested - dots appeared randomly rather than sequentially, followed by lines drawing from top to bottom, completing in one second total.
+
+<div class="media-container"><video controls>
+ <source src="/blog/media/Week 19 - 00:18:18 - Character Creation 1.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+
+<h3>Grade: A</h3>
+<p>Quick successful implementation that accomplished exactly what we asked for in just two iterations.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Mid Journey Character Creation and Consistency Testing</h2>
+
+<p>We conducted comprehensive testing of Mid Journey's ability to create consistent characters across multiple iterations, uncovering both impressive capabilities and concerning biases.</p>
+
+<h3>The Challenge</h3>
+
+<p>We wanted to test whether Mid Journey could maintain character consistency - creating the same character in different scenarios while keeping recognizable features.</p>
+
+<h3>Our Testing Approach</h3>
+<ul>
+ <li>Started with a cartoon cheetah character as our base design</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="3"><strong>Video Extensions:</strong> Extended the 5-second clips by either continuing the same action (more running) or changing the prompt (stop and make sand pizzles). You can essentially piece together longer narratives this way.</li>
 
-<p></ol></p>
-<p><strong>Breakthrough Moment:</strong> Understanding that Midjourney isn't just for one-off images anymore. The combination of character consistency, video generation, and style control makes it a legitimate tool for brand work and content creation.</p>
-
-<p></ul></p>
-<p><strong>Challenges & AI Failures:</strong> Gender representation issues - the AI kept defaulting to male characteristics even when specifically requested female mascots. Also, complex logos don't always translate perfectly, but simpler designs work better.</p>
-
-<p><strong>Final Verdict:</strong> A (At $9/month, this is incredibly cost-effective compared to hiring designers or video creators)</p>
-
-<h2><strong>The QA Bot that Wasn't</strong></h2>
-
-<p><strong>The Goal:</strong> Test website functionality automatically across different screen sizes using Browserbase MCP. We wanted to see if AI could handle routine QA testing without manual verification.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Connected Browserbase MCP</strong> - surprisingly easy setup, just added the API key and it started working immediately.</li>
-
-</ol>
-<ol class="preserve-numbers">
-<li value="2"><strong>Automatic Testing Strategy:</strong> The tool generated its own testing plan for different screen sizes (desktop, tablet, mobile) and began executing without being asked.</li>
-
-<p></ol></p>
-<p>[SCREENSHOT timestamp="00:41:18"] <em>Browserbase automatically generating test results</em></p>
-
+<div class="media-container"><img src="/blog/media/Week 19 - 00:23:43 - Character Creation 2.jpg" alt="Screenshot at 00:23:43"></div>
+<ul>
+ <li>Used Mid Journey's character reference feature to maintain consistency</li>
+ <li>Tested different "temperature" settings (400 for exact same character vs. 10 for generally similar)</li>
+ <li>Created multiple scenarios: birthday celebration, different poses, various contexts</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="3"><strong>Functionality Testing:</strong> It tested responsive design, accessibility, and hamburger menu functionality across devices. Provided detailed summaries with "95% confidence" ratings, all within the Claude chat interface.</li>
 
-<p></ol></p>
-<p><strong>The Problem:</strong> Despite reporting everything worked perfectly with high confidence, manual testing revealed the hamburger menu wasn't working at all on mobile. When we fixed it with Cursor and re-tested, Browserbase still gave incorrect assessments.</p>
+<div class="media-container"><img src="/blog/media/Week 19 - 00:24:27 - Character Creation 3.jpg" alt="Screenshot at 00:24:27"></div>
 
-<p></ul></p>
-<p>[SCREENSHOT timestamp="00:43:27"] <em>Browserbase’s incorrect findings</em></p>
-
-<p><strong>Challenges & AI Failures:</strong> The tool worked exactly as advertised - it just gave completely wrong results while being extremely confident about them. This is particularly dangerous for QA work where you need reliable verification.</p>
-
-<p><strong>Final Verdict:</strong> F (Technically functional but unreliable - overconfidence in incorrect results makes it potentially harmful)</p>
-
-<h2><strong>Turning Listings into Calendarized Events</strong></h2>
-
-<p><strong>The Goal:</strong> Netta receives a weekly newsletter with feminist events across Israel. The newsletter manually lists events with dates and links, but getting actual times and details requires clicking through each link individually - a time-consuming weekly task for anyone wanting to stay informed about relevant events happening nationwide. She wanted to programmatically improve that, by creating a script that would create a calendar listing for each event.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Prompt Engineering:</strong> Started with creating the right prompts for Google Apps Script automation, specifying to include event links in descriptions, default time to 7 PM (if no time is listed).</li>
-
-</ol>
-<ol class="preserve-numbers">
-<li value="2"><strong>Google Apps Script Development:</strong> Built a script that connected to an email inbox, processes emails from a specific sender (to identify which are the feminist newsletter emails), and then looks for keywords like "invite" and "link" to extract event URLs and descriptions.</li>
-
-</ol>
-<ol class="preserve-numbers">
-<li value="3"><strong>Extensive Debugging:</strong> Hit a major loop where events kept populating in the organizer field instead of the description field. This required switching between Claude and ChatGPT, eventually creating a project to maintain context and finally solving the field mapping issue.</li>
-
-</ol>
-<ol class="preserve-numbers">
-<li value="4"><strong>Link Extraction Enhancement:</strong> Improved the parsing to specifically identify and separate multiple links per event, ensuring both registration and information links appear in calendar descriptions.</li>
-
-<p></ol></p>
-<p>[CLIP timestamp="00:54:57" duration="40"] <em>Video generation showing the running animation and some variations</em></p>
-
+<h3>Character Consistency Results</h3>
+<ul>
+ <li><strong>Excellent consistency</strong>: When using character reference at temperature 400, we achieved "exact same individual character" results</li>
+ <li><strong>Spot pattern preservation</strong>: For example, Cheeto maintained identical spot patterns across different scenarios</li>
+ <li><strong>Style reference control</strong>: We learned to use style reference to maintain flat cartoon aesthetics vs. unwanted 3D rendering</li>
+ <li><strong>Scenario flexibility</strong>: Successfully generated the same character in different contexts (birthday party, various poses)</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="5"><strong>Identifying next steps:</strong> The next phase will be adding automatic time extraction by having the script "click through" to visit the event links and parse time and location information - turning this from a calendar placeholder system into a fully automated event tracker.</li>
 
-<p></ol></p>
-<p><strong>Breakthrough Moment:</strong> When we switched from individual chats to using a ChatGPT project, the debugging became much more efficient. The AI maintained context about previous attempts and could build on solutions rather than starting fresh each time.</p>
-
-<p></ul></p>
-<p><strong>Challenges & AI Failures:</strong> The debugging loop was frustrating - kept getting the same incorrect field mappings despite multiple corrections. The solution was switching AI tools and using project-based context retention.</p>
-
-<p><strong>Final Verdict:</strong> B+ (Works well after setup, saves significant weekly time, clear path for enhancement to extract actual event times)</p>
-
-<h2><strong>Component Libraries: Great Idea, Poor Execution</strong></h2>
-
-<p><strong>The Goal:</strong> Create branded component libraries from existing design systems (using Canva as an example) to enable rapid prototyping while maintaining brand consistency. This addresses a real designer pain point - needing prototypes that look real enough for user testing but match specific brand guidelines.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Screenshot Analysis:</strong> Captured multiple screens of Canva's design system - navigation, headers, buttons, feature sections, footers.</li>
-
-</ol>
-<ol class="preserve-numbers">
-<li value="2"><strong>Component Extraction:</strong> Asked v0 to create a component library from the screenshots. It successfully identified navigation components, button styles, feature sections, and color schemes.</li>
-
-<p></ol></p>
-<p>[CLIP timestamp="01:07:12" duration="30"] <em>Generated component library showing extracted Canva elements</em></p>
-
+<h3>Mascot Creation Process</h3>
+We also experimented with creating a new LTAIT brand-aligned mascot from scratch
+<ul>
+ <li>Asked ChatGPT to suggest mascot concepts based on our business description</li>
+ <li>Selected a "platypus" concept for being "weird, cute, and adaptable"</li>
+ <li>Experimented with different artistic styles: retro cartoon, steampunk</li>
+ <li>Tested various character attributes and scenarios</li>
+ <li>Used Mid Journey's "animate" button feature on static images</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="3"><strong>Prototype Generation:</strong> Created two test implementations - an education hub landing page and a Jerry's Gelato website using the extracted components.</li>
 
-<p></ol></p>
-<p><strong>The Problem:</strong> While the components were technically correct, the generated websites looked terrible. Massive spacing issues, poor layout decisions, and generally unappealing design quality.</p>
+<div class="media-container"><video controls>
+ <source src="/blog/media/Week 19 - 00:25:01 - Character Creation 2.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
 
-<p></ul></p>
-<p>[SCREENSHOT timestamp="01:09:48"] <em>Jerry's Gelato prototype showing spacing and layout problems</em></p>
+<h3>Gender Challenge We Encountered</h3>
+When trying to create a "female platypus persona," we had difficulty getting clearly female results. Even when specifying "female" and adding details like a lab coat, the results often appeared gender-neutral or masculine. We found that the characters seemed to default to looking more like boys, and creating a clearly female character required more specific prompting.
 
-<p><strong>Challenges & AI Failures:</strong> The tool could identify and extract design elements correctly but couldn't apply them thoughtfully. The spacing was consistently off, and the overall composition felt amateur despite using professional brand elements.</p>
+<h3>What Worked Well</h3>
 
-<p><strong>Final Verdict:</strong> C (Components extracted correctly but unusable for actual website generation - defeats the purpose if you can't build with them)</p>
-
-<h2><strong>The Academic Lit Review</strong></h2>
-
-<p><strong>The Goal:</strong> Help a doctor friend create a literature review proposal for women's health research during wartime periods. This normally takes weeks of manual paper searching, reading abstracts, and synthesis - exactly the kind of work AI should excel at.</p>
-
-<p><strong>What We Tried:</strong></p>
-
-<p>We tested six different research tools systematically, using specialized prompts for each platform:</p>
-
-<h3><strong>Elicit - The Clear Winner</strong></h3>
-
-<ol class="preserve-numbers">
-<li value="1"><strong>Comprehensive Analysis:</strong> Processed 50 relevant papers (10 in free version), created detailed summary tables, and wrote in proper academic style.</li>
-
-<p></ol></p>
-<p>[CLIP timestamp="01:20:51" duration="30"] <em>Elicit's structured output, with academic table showing study demographics and findings</em></p>
-
+<p>
+<ul>
+ <li>Character reference system is highly effective for consistency</li>
+ <li>Temperature controls provide good flexibility between exact matches and variations</li>
+ <li>Style reference prevents unwanted artistic interpretation changes</li>
+ <li>Multiple variations per generation give good options to choose from</li>
 </ul>
-<ol class="preserve-numbers">
-<li value="2"><strong>Methodology Documentation:</strong> Provided clear screening criteria, data extraction methods, and quality assessment - exactly what you'd expect in a professional literature review.</li>
 
-</ol>
-<ol class="preserve-numbers">
-<li value="3"><strong>Structured Output:</strong> Organized findings by theme (mental health, breastfeeding, autoimmune disorders) with proper academic formatting and citations.</li>
+<div class="media-container"><video controls><source src="/blog/media/Week 19 - 002515 - Clip.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
 
-<p></ol></p>
-<p>The writing quality was impressive - it read like something a graduate student would produce, complete with methodology sections and critical gap analysis.</p>
+<h3>Grade: A-</h3>
+<p>Excellent technical capabilities for character consistency and reference systems. Minor points deducted for some difficulty in creating clearly female characters when specified.</p>
 
+<div class="section-separator">• • •</div>
+
+<h2>Mid Journey Video Generation Capabilities</h2>
+
+<p>We tested Mid Journey's animation features to understand how it handles the transition from static images to moving content.</p>
+
+<h3>The Challenge</h3>
+
+<p>After creating consistent character designs, we wanted to explore Mid Journey's video generation capabilities to bring our characters to life with motion.</p>
+
+<h3>Our Testing Process</h3>
+<ul>
+ <li>Used an existing video prompt, and prompted Midjourney to use that look/feel but change what the character did (little girl running on the beach, inspired by Netta's child)</li>
 </ul>
-<h3><strong>Claude Deep Research - Strong Second Place</strong></h3>
 
-<p>Analyzed 313+ sources and provided comprehensive thematic analysis with research gaps identification. Less academically structured than Elicit but broader in scope.</p>
-
-<h3><strong>ChatGPT Deep Research - Decent Synthesis</strong></h3>
-
-<p>Organized findings by topic with good synthesis across 37 sources. Well-structured but not as academically rigorous as the top two options.</p>
-
-<h3><strong>The Rest - Mixed Results</strong></h3>
 
 <ul>
-<li><strong>Perplexity:</strong> Formatting issues made it hard to use</li>
-<li><strong>Consensus:</strong> Limited to one-paragraph summaries despite finding 10 relevant sources</li>
-<li><strong>Scite:</strong> Looked promising but full features locked behind paywall</li>
+ <li>Also tried creating an animation of a hardware company's logo, turning a pipe into the logo</li>
+</ul>
+<ul>
+<li>Generated multiple animation variations to compare quality and effectiveness
+</li>
+</ul>
+<ul>
+ <li>Evaluated the results for smoothness, duration, and overall appeal</li>
+</ul>
 
-<p></ul></p>
-<p><strong>Breakthrough Moment:</strong> Realizing we could upload all the different research outputs to a Claude project and ask for a consolidated executive summary. This gave us the best of all approaches - comprehensive source coverage with academic rigor.</p>
+<h3>Animation Capabilities</h3>
 
-<p><strong>The Workflow We Created:</strong></p>
+<p>
+<ul>
+ <li><strong>Simple activation</strong>: The animate button provides easy access to video generation</li>
+ <li><strong>Short duration</strong>: Animations are limited to approximately 5 seconds</li>
+ <li><strong>Quality output</strong>: Generated smooth motion that enhanced the static designs</li>
+ <li><strong>Multiple format options</strong>: Could download as GIF or other video formats</li>
+ <li><strong>Variety generation</strong>: Like static images, provided multiple animation variations per request</li>
+</ul>
 
-<ol class="preserve-numbers">
-<li value="1">Generate literature reviews from 3-4 different tools</li>
-</ol>
-<ol class="preserve-numbers">
-<li value="2">Upload all outputs to Claude project</li>
-</ol>
-<ol class="preserve-numbers">
-<li value="3">Request consolidated executive summary</li>
-</ol>
-<ol class="preserve-numbers">
-<li value="4">Generate research proposal ideas based on identified gaps</li>
+<h3>Technical Performance</h3>
 
-<p></ol></p>
-<p>[SCREENSHOT timestamp="01:28:20"] <em>Demonstrating the consolidated workflow and final proposal generation</em></p>
+<p>
+<ul>
+ <li>Animations maintained character integrity during motion</li>
+ <li>Smooth transitions without obvious artifacts</li>
+ <li>Appropriate motion that enhanced rather than distracted from the character design</li>
+ <li>Good rendering quality suitable for web or presentation use</li>
+</ul>
 
-<p></ul></p>
-<p><strong>Challenges & AI Failures:</strong> Elicit's free version only analyzes 10 papers deeply (vs 50 in paid), and some tools like Scite hide their best features behind expensive paywalls. The real challenge was learning which tool worked best for which aspect of research.</p>
+<h3>Limitations Discovered</h3>
 
-<p><strong>Final Verdict:</strong> A (Elicit best overall, with Claude Deep Research as strong backup - completed weeks of work in 2 hours)</p>
+<p>
+<ul>
+ <li><strong>Duration constraints</strong>: 5-second limit restricts storytelling possibilities</li>
+ <li><strong>Limited motion control</strong>: Cannot specify exact animation sequences or timing</li>
+ <li><strong>Basic animation types</strong>: Motion appears to be generated automatically rather than following detailed direction</li>
+</ul>
 
-<p>The cost consideration: Elicit Pro is $50/month, but for academic research where literature reviews are essential, this represents massive time savings. Our friend was shocked at the quality and comprehensiveness of what we produced in a single session.</p>
+<h3>Our Assessment</h3>
 
-<h2><strong>Key Takeaways: The Age of Specialized AI</strong></h2>
+<p>The animations were smooth and maintained character integrity during motion. While limited to 5 seconds and with no detailed motion control, the feature worked well for creating simple animated versions of our characters.
 
-<p>This week revealed a clear trend: <strong>specialized AI tools are starting to outperform general-purpose ones for professional workflows</strong>. Rather than trying to do everything adequately, the best tools focus on specific domains and excel within them.</p>
+<div class="section-separator">• • •</div>
 
-<p>The debugging insight was equally valuable - when you hit a loop with one AI tool, don't keep banging your head against the wall. Switch tools, use project-based context retention, or even have one AI analyze what another AI got wrong. The multi-tool approach is becoming essential.</p>
+<h2>Browser Testing with Claude and MCP Integration</h2>
 
-<p>Most surprising was the reliability spectrum. Some tools (Midjourney, Elicit) delivered consistently impressive results, while others (Browserbase) failed catastrophically despite high confidence ratings. Learning to identify trustworthy AI tools for professional work is becoming a critical skill.</p>
+<p>We tackled website testing this week using Claude's new MCP (Model Context Protocol) integration for browser automation.</p>
 
-<p>The cost-effectiveness factor can't be ignored either. At $9/month, Midjourney delivers design work that would cost hundreds to outsource. At $50/month, Elicit provides research capabilities that would take weeks manually. For professional applications, these specialized tools are becoming legitimate business investments rather than experimental toys.</p>
+<h3>The Challenge</h3>
 
-<p>The question isn't whether AI tools can handle professional workflows anymore - it's which ones you can actually trust with your reputation on the line.</p>
+<p>We needed to test responsive design functionality across different screen sizes for our website's hamburger menu and navigation. 
+
+</strong>:</p>
+<ul>
+ <li>Set up MCP integration with Claude (which was surprisingly straightforward)</li>
+</ul>
+
+<div class="media-container"><img src="/blog/media/Week 19 - 00:42:12 - Browser Testing 2.jpg" alt="Screenshot at 00:42:12"></div>
+
+<ul>
+ <li>Asked Claude to create and execute a comprehensive testing strategy</li>
+ <li>The tool automatically generated test plans covering multiple screen sizes and functionality checks</li>
+ <li>It provided detailed reports on what it found during testing</li>
+</ul>
+
+<h3>The Process</h3>
+
+<p>
+<ul>
+ <li>Claude created a structured testing plan without us having to specify the approach</li>
+ <li>It tested responsiveness across tablet and phone screen sizes</li>
+ <li>Performed functionality testing by attempting to click navigation elements</li>
+ <li>Generated detailed reports with pass/fail results and recommendations</li>
+</ul>
+
+<h3>What Worked Well</h3>
+
+<p>The automation aspect was genuinely impressive. We simply asked "how do I test if the hamburger in the header works in different screen sizes?" and Claude immediately started working, creating test plans and executing them systematically.</p>
+
+<h3>The Problem</h3>
+
+<p>While the tool worked beautifully from a process perspective, it gave us completely wrong results. It reported that our navigation was working perfectly when we knew it was broken. Even when we manually verified the issues and reported them back, Claude insisted everything was functioning correctly.<div class="media-container"><video controls>
+ <source src="/blog/media/Week 19 - 00:41:14 - Browser Testing 1.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+
+<h3>Reality Check</h3>
+
+<p>We ended up using Cursor to actually fix the navigation issues. When we fed Claude's "everything is working" report back to Cursor, Cursor immediately identified that Claude was wrong and provided the correct diagnosis.</p>
+
+<h3>Grade: C</h3>
+<p>Excellent automation and testing methodology, but fundamentally unreliable results make it impractical for real-world use. The process is impressive, but accuracy is everything in testing.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Email-to-Calendar Automation with Google Apps Script</h2>
+
+<p>This project emerged from a real friend's need to automate her workflow around a weekly feminist events newsletter in Israel.</p>
+
+<h3>The Business Problem</h3>
+
+<p>Our friend receives a weekly newsletter containing multiple event listings (dates, times, locations, descriptions) and wanted them automatically added to her Google Calendar instead of manually processing each email every week.
+
+<div class="media-container"><img src="/blog/media/Week 19 - 00:47:17 - Browser Testing 3.jpg" alt="Screenshot at 00:47:17"></div>
+
+<h3>Our Technical Approach</h3>
+
+<p>We used ChatGPT to design the solution, which recommended Google Apps Script as the optimal platform for Gmail-to-Calendar integration.
+
+<div class="media-container"><img src="/blog/media/Week 19 - 00:48:14 - Browser Testing 4.jpg" alt="Screenshot at 00:48:14"></div>
+
+<h3>Implementation Steps</h3>
+
+<p>
+<ul>
+ <li>Created prompts to help ChatGPT understand the email format and parsing requirements</li>
+ <li>Generated Google Apps Script code to:</li>
+ <li>Connect to Gmail and identify the specific newsletter emails</li>
+ <li>Parse event information using keyword recognition ("invite" and "link" were key identifiers)</li>
+ <li>Create properly formatted calendar entries with event details and relevant links</li>
+ <li>Handle recurring weekly processing automatically</li>
+</ul>
+
+<div class="media-container"><img src="/blog/media/Week 19 - 004833 - Screenshot.jpg" alt="Screenshot at 00:48:33"></div>
+
+<h3>The Development Process</h3>
+
+<p>We initially made the mistake of not starting with a proper ChatGPT project, leading to some debugging loops. The key breakthrough came when we:
+<ul>
+ <li>Ran out of credits on Claude (forcing us to switch tools)</li>
+ <li>Created a proper ChatGPT project with full context</li>
+ <li>Provided the latest code version and clear problem description</li>
+</ul>
+
+<p>This allowed ChatGPT to immediately understand where we were stuck and provide working solutions.</p>
+
+<h3>Real-World Results</h3>
+
+<p><ul>
+ <li>Successfully processes newsletter emails automatically</li>
+ <li>Creates calendar entries with proper timing (defaulting to 7 PM when specific times aren't available)</li>
+ <li>Includes both registration links and event description links in calendar entries</li>
+ <li>Saves our friend 15-20 minutes of manual work each week</li>
+</ul>
+
+<h3>Future Enhancement Plans</h3>
+
+<p>We want to add functionality to click through event links and extract actual event times, rather than defaulting everything to 7 PM. This would require additional web scraping capabilities.</p>
+
+<h3>Deployment Strategy</h3>
+
+<p>We're planning to share both the script code (for technical users) and a public calendar option (for non-technical users) to maximize accessibility.</p>
+
+<h3>Grade: A+</h3>
+<p>This solved a real problem efficiently with tools that were perfectly suited to the task. The 1 hour 45 minutes of development time created ongoing weekly value, and the Google Apps Script integration was seamless.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Component Library Creation from Screenshots</h2>
+
+<p>We explored whether AI could create reusable component libraries from existing website designs, addressing a common challenge in design and development workflows.</p>
+
+<h3>The Concept</h3>
+
+<p>A designer mentioned that creating prototypes with company-specific branding is challenging with AI tools. We wanted to test if we could extract component libraries from screenshots of existing sites and then use those components to build new designs.</p><h3>Our Test Setup</h3>
+
+<p>
+<ul>
+ <li>Used Canva as our test subject (chosen for its distinctive, consistent branding)</li>
+ <li>Took screenshots of various page elements: headers, navigation, hero sections, footers</li>
+ <li>Fed these to Claude with prompts to extract reusable components</li>
+</ul>
+
+<h3>The Process</h3>
+
+<p>
+<ul>
+ <li>Initially, Claude tried to recreate entire pages rather than isolating components</li>
+ <li>After clarifying that we wanted only components, it generated reasonably accurate code representations</li>
+ <li>Successfully identified different UI patterns: buttons, headers, navigation elements, feature sections</li>
+</ul>
+
+<h3>What Worked</h3>
+
+<p>
+<ul>
+ <li>Claude correctly identified and coded many visual elements from the screenshots</li>
+ <li>Generated usable component code that captured Canva's visual style</li>
+ <li>Created organized component libraries with proper categorization</li>
+</ul>
+
+<h3>Limitations We Discovered</h3>
+
+<p>
+<ul>
+ <li>Missing important details like typography specifications (font sizes, weights, etc.)</li>
+ <li>Struggled with contextual elements like dropdown menus that appear on hover</li>
+ <li>Memory limitations caused it to forget the original component library goal when adding new screenshots</li>
+ <li>Spacing and layout issues when attempting to use components to build new pages</li>
+</ul>
+
+<h3>Testing Applications</h3>
+
+<p>We tried using the component library to build:</p>
+<ol>
+<li><strong>Canva Education Hub</strong>: A landing page for educators using Canva's existing style
+</li>
+<li><strong>Jerry's Gelato</strong>: A completely different business using Canva's design aesthetic
+
+<div class="media-container"><img src="/blog/media/Week 19 - 01:09:48 - Component Library 2.jpg" alt="Screenshot at 01:09:48"></div>
+
+<h3>Results</h3>
+
+<p>Both attempts produced recognizable pages with proper branding elements, but with significant spacing and layout issues that would require manual cleanup.
+
