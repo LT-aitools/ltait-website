@@ -1,0 +1,335 @@
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background-color: #fef7f7 !important;
+    line-height: 1.6 !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    color: #333 !important;
+  }
+
+  h1 {
+    font-size: 2.5em !important;
+    margin-bottom: 0.5em !important;
+    color: #2c3e50 !important;
+  }
+
+  h2 {
+    font-size: 2em !important;
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+    color: #34495e !important;
+    border-bottom: 2px solid #e74c3c !important;
+    padding-bottom: 0.3em !important;
+  }
+
+  h3 {
+    font-size: 1.5em !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.8em !important;
+    color: #2c3e50 !important;
+  }
+
+  p {
+    margin-bottom: 1em !important;
+  }
+
+  ul {
+    margin: 1em 0 !important;
+    padding-left: 2em !important;
+  }
+
+  li {
+    margin-bottom: 0.5em !important;
+    list-style-type: disc !important;
+  }
+
+  li::marker {
+    color: #e74c3c !important;
+  }
+
+  strong {
+    font-weight: bold !important;
+    color: #2c3e50 !important;
+  }
+
+  em {
+    font-style: italic !important;
+    color: #7f8c8d !important;
+  }
+
+  .grade {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    color: #e74c3c !important;
+    margin: 1em 0 !important;
+  }
+
+  .media-container {
+    margin: 1.5em 0 !important;
+    text-align: center !important;
+    background: transparent !important;
+  }
+
+  .media-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  }
+
+  .media-container video {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  }
+
+  .section-separator {
+    text-align: center !important;
+    font-size: 1.5em !important;
+    margin: 3em 0 !important;
+    color: #bdc3c7 !important;
+    letter-spacing: 0.5em !important;
+  }
+
+  .publication-info {
+    font-style: italic !important;
+    color: #7f8c8d !important;
+    margin-bottom: 2em !important;
+  }
+
+  .byline {
+    font-style: italic !important;
+    color: #95a5a6 !important;
+    font-size: 0.9em !important;
+    margin-bottom: 2em !important;
+  }
+
+  /* Edit Mode Styles - to help with visibility during editing */
+  .edit-note {
+    background-color: #fff3cd !important;
+    border: 1px solid #ffeaa7 !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    font-style: italic !important;
+    color: #856404 !important;
+  }
+</style>
+
+<article>
+  <header>
+    <h1>Week 22: From Manual to Automated - Streamlining Our Blog Creation Process</h1>
+    <p class="publication-info">Published on September 9, 2025</p>
+    <p class="byline">This blog post was written and published by a team of agents under Claude Code, based on a transcript of a meeting between two humans, Netta and Charlie.</p>
+  </header>
+
+
+  <p>This week was all about solving a problem that's been nagging us for months: our blog creation process was painfully manual and time-consuming. Charlie dove deep into automating everything from transcript processing to screenshot selection, with mixed but promising results.</p>
+
+  <section>
+    <h2>Blog Process Time Analysis</h2>
+
+    <h3>The Problem</h3>
+
+    <p>We finally did what we should have done months ago - actually timed how long our blog creation process takes. Charlie broke down every single step and the results were eye-opening:</p>
+
+    <div class="media-container">
+      <img src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:01:03 - Blog Process Time Analysis 1.jpg" alt="Screenshot showing blog process time breakdown">
+    </div>
+
+    <ul>
+      <li><strong>Initial setup</strong>: 15 minutes (downloading meeting video, running transcripts, getting Granola notes, updating Claude projects)</li>
+      <li><strong>Blog writing and editing</strong>: 40 minutes (running blog post generation, manual editing, timestamp checking)</li>
+      <li><strong>Final processing</strong>: Additional time for social media, Medium posting, etc.</li>
+    </ul>
+
+    <p>By the time we even got to writing the actual blog post, we'd already spent 15 minutes just on prep work. The manual editing was particularly painful - copying, pasting, and fixing various issues like attribution problems, adding needed context, and replacing screenshots/videos.</p>
+
+    <p>While this analysis was necessary foundational work, it mainly confirmed what we already suspected: our process was inefficient and needed major improvements.</p>
+  </section>
+
+  <div class="section-separator">• • •</div>
+
+  <section>
+    <h2>Granola Direct Blog Writing</h2>
+
+    <h3>The Experiment</h3>
+
+    <p>Since Granola already had our meeting transcripts and its own AI-generated notes, we wondered: could it just write our blog posts directly? We asked it to generate a blog post from scratch without our usual elaborate multi-step process.</p>
+
+    <h3>Results</h3>
+
+    <p>The output was decent but fell short in several key areas:</p>
+    <ul>
+      <li><strong>Too short</strong>: Lacked the detailed explanations our readers expect</li>
+      <li><strong>Format issues</strong>: Didn't match our established blog structure</li>
+      <li><strong>Surface level</strong>: When we asked for more detail, it made every section the same length, turning brief mentions into weirdly expanded sections</li>
+    </ul>
+
+    <div class="media-container">
+      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:04:48 - Granola Blog Writing.mp4"></video>
+    </div>
+
+    <p>The bigger problem was timestamp accuracy. When we asked Granola to suggest timestamps for screenshots and video clips, it was completely wrong. It seemed to think our 100-minute meeting was only an hour long and never suggested timestamps beyond the 60-minute mark.</p>
+
+    <div class="grade"><strong>Grade: C-</strong></div>
+    <p><em>Granola showed promise for basic blog generation but failed completely at the visual content selection that makes our posts engaging.</em></p>
+  </section>
+
+  <div class="section-separator">• • •</div>
+
+  <section>
+    <h2>Claude Direct Blog Writing</h2>
+
+    <h3>The Process</h3>
+
+    <p>Instead of our usual elaborate prompt chain, we gave Claude just a simple instruction and the raw transcript. The results surprised us - the writing quality was actually better than our original process.</p>
+
+    <div class="media-container">
+      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:08:40 - Claude Blog Writing.mp4"></video>
+    </div>
+
+    <p>We started with a minimal prompt and iteratively refined it:</p>
+
+    <ol>
+      <li><strong>First attempt</strong>: Good content but too many bullet points, felt like meeting notes</li>
+      <li><strong>Second attempt</strong>: Asked for narrative prose, but it overcorrected and became too wordy</li>
+      <li><strong>Third attempt</strong>: Found the sweet spot with "balance between bullet points and narrative prose"</li>
+    </ol>
+
+    <div class="media-container">
+      <img src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:10:12 - Claude Blog Writing 2.jpg" alt="Screenshot showing successful Claude blog output">
+    </div>
+
+    <p>Key improvements we added:</p>
+    <ul>
+      <li>Write in first person using "we"</li>
+      <li>Skip administrative discussion at the start of meetings</li>
+      <li>Don't artificially assign projects to individuals when we work collaboratively</li>
+    </ul>
+
+    <h3>Results</h3>
+
+    <p>The final output was significantly better than our manual process:</p>
+    <ul>
+      <li>More natural writing flow</li>
+      <li>Better section organization that adapted to each project's needs</li>
+      <li>Maintained consistency while allowing flexibility</li>
+      <li>Much faster generation time</li>
+    </ul>
+
+    <div class="grade"><strong>Grade: A-</strong></div>
+    <p><em>This approach dramatically improved both quality and efficiency. The writing felt more natural and engaging than our previous multi-step process.</em></p>
+  </section>
+
+
+  <div class="section-separator">• • •</div>
+
+  <section>
+    <h2>Screenshot Timestamp Automation Attempts</h2>
+
+    <div class="media-container">
+      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:06:03 - Screenshot Automation.mp4"></video>
+    </div>
+
+    <h3>The Challenge</h3>
+
+    <p>The most time-consuming part of our process is finding good screenshots and video clips. We spend 15+ minutes manually scrubbing through recordings to find relevant moments. Could we automate this?</p>
+
+    <div class="media-container">
+      <img src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:06:30 - Screenshot Automation 1.jpg" alt="Screenshot showing timestamp automation interface">
+    </div>
+
+    <h3>The Failures</h3>
+
+    <p>Both Claude and Granola failed spectacularly at this task:</p>
+
+    <p><strong>Granola's problems</strong>:</p>
+    <ul>
+      <li>Thought our 100-minute meeting was only 60 minutes long</li>
+      <li>Never suggested any timestamps after the one-hour mark</li>
+      <li>When asked for 10-minute breakdowns, it just assigned each topic exactly 10 minutes regardless of actual discussion length</li>
+    </ul>
+
+    <p><strong>Claude's problems</strong>:</p>
+    <ul>
+      <li>Opposite issue - thought our meeting was 2 hours 40 minutes when it was only 1 hour 40 minutes</li>
+      <li>Same artificial time allocation problem as Granola</li>
+      <li>Screenshots it selected were often from irrelevant moments (like "can you see my screen?" instead of actual demos)</li>
+    </ul>
+
+    <h3>One Small Win</h3>
+
+    <p>When we flipped the approach and asked Claude to find timestamps for specific topics (rather than describing what happened at each timestamp), it got reasonably close - within 30 seconds of the right moments for most topics.</p>
+
+    <div class="media-container">
+      <img src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:06:44 - Screenshot Automation 2.jpg" alt="Screenshot showing successful timestamp finding approach">
+    </div>
+
+    <div class="grade"><strong>Grade: D+</strong></div>
+    <p><em>While we found one approach that worked somewhat, the screenshot automation remains our biggest unsolved challenge.</em></p>
+  </section>
+
+  <div class="section-separator">• • •</div>
+
+  <section>
+    <h2>Claude Code Blog Agent Setup</h2>
+
+    <h3>The Vision</h3>
+
+    <p>Inspired by our successes with direct Claude writing, we decided to build a comprehensive automation system using Claude Code. The goal: fully automate everything from downloading meeting videos to publishing finished blog posts.</p>
+
+    <div class="media-container">
+      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:15:20 - Claude Code Setup.mp4"></video>
+    </div>
+
+    <h3>The Implementation</h3>
+
+    <p>We set up a sophisticated system with:</p>
+    <ul>
+      <li><strong>Documentation standards</strong>: PRD docs, progress tracking, session summaries</li>
+      <li><strong>Quality control loops</strong>: Content managers and project managers reviewing work</li>
+      <li><strong>Multi-agent workflow</strong>: Specialized sub-agents for different aspects</li>
+      <li><strong>Pre-commit hooks</strong>: Automated testing and quality checks</li>
+    </ul>
+
+    <p>The system includes roles for content writers, project managers, and quality reviewers, each with specific expertise and responsibilities.</p>
+
+    <div class="media-container">
+      <img src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:16:27 - Claude Code Setup 1.jpg" alt="Screenshot showing Claude Code agent setup">
+    </div>
+
+    <h3>Early Results</h3>
+
+    <p>The initial test showed both promise and remaining challenges:</p>
+    <ul>
+      <li><strong>Blog writing</strong>: Decent quality, though not quite as good as our manual Claude prompting</li>
+      <li><strong>Screenshot selection</strong>: Still problematic - only about 3 out of 15 images/videos would have been acceptable</li>
+      <li><strong>Process complexity</strong>: The full automation uses significant Claude Code credits (we hit usage limits during our testing process)</li>
+    </ul>
+
+    <div class="grade"><strong>Grade: B</strong></div>
+    <p><em>Ambitious and well-structured, but still needs refinement. The infrastructure is solid, but the output quality needs improvement to match our manual processes.</em></p>
+  </section>
+
+  <div class="section-separator">• • •</div>
+
+  <section>
+    <h2>Looking Ahead</h2>
+
+    <p>This week highlighted both the promise and challenges of automation. While we made significant progress on content generation, visual content selection remains our biggest hurdle. The Claude direct writing approach is immediately usable and dramatically improves our efficiency. We suspect Anthropic's model improvements since we created our original workflow has allowed for this.</p>
+
+    <p>Our next steps:</p>
+    <ul>
+      <li>Refine the Claude Code agent system based on this week's learnings</li>
+      <li>Explore alternative approaches for screenshot and video clip selection</li>
+      <li>Test notebook LM for one-shot blog generation</li>
+      <li>Integrate social media automation once the core blog process is solid</li>
+    </ul>
+
+    <p>The goal isn't just to save time - it's to maintain or improve quality while removing the tedious manual work that prevents us from experimenting with more AI tools each week.</p>
+  </section>
+</article>

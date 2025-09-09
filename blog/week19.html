@@ -1,0 +1,404 @@
+
+
+<style>
+body {
+ font-family: system-ui, -apple-system, sans-serif;
+ line-height: 1.6;
+ color: #333;
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 2rem 1rem;
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 2rem 0; }
+h2 { font-size: 2rem; font-weight: 700; margin: 3rem 0 1.5rem 0; }
+h3 { font-size: 1.4rem; font-weight: 600; margin: 2rem 0 1rem 0; }
+p { margin: 1.2rem 0; }
+ul { margin: 1.2rem 0; padding-left: 2rem; list-style-type: disc !important; }
+li { margin: 0.5rem 0; list-style-type: disc !important; display: list-item !important; }
+
+.media-container {
+ margin: 2rem 0;
+ text-align: center;
+ background: transparent;
+ border-radius: 8px;
+ padding: 1rem;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.media-container img, .media-container video {
+ max-width: 100%;
+ height: auto;
+ border-radius: 8px;
+}
+
+.section-separator {
+ text-align: center;
+ font-size: 1.5rem;
+ letter-spacing: 0.5rem;
+ margin: 5rem 0;
+ color: #666;
+ opacity: 0.6;
+}
+
+ul li {
+ list-style: disc !important;
+ display: list-item !important;
+ margin-left: 0 !important;
+}
+
+.blog-content ul {
+ list-style-type: disc !important;
+ padding-left: 2rem !important;
+}
+
+.blog-content li {
+ list-style: disc !important;
+ display: list-item !important;
+}
+</style>
+
+<h1><strong>Week 19:</strong> From Code Animation to AI Research - Testing Tools Across Creative and Technical Domains</h1>
+
+<p style="font-style: italic; color: #666; margin-bottom: 2rem;">Published on September 6, 2025</p>
+
+<p>This week we explored a diverse range of creative and technical challenges, from animating logos with code to testing character consistency in AI image generation. We dove deep into browser automation, practical email solutions, design systems, and academic research tools, discovering how different AI tools excel in their specialized domains.</p>
+
+<h2>SVG Logo Animation with Cursor</h2>
+
+<p>Inspired by a podcast mention about Trello's animated favicons, we decided to test whether Cursor could animate our company logo.</p>
+
+<h3>The Challenge</h3>
+
+<p>After hearing about how Trello animates their favicons and how a designer wanted to recreate similar animations after losing original files, we wanted to see if Cursor could animate our SVG logo.</p>
+
+<h3>Our Discovery</h3>
+
+<p>We initially didn't know that SVGs could be animated with code - we thought you could only make animated GIFs.</p>
+
+<h3>Implementation Process</h3>
+<ul>
+ <li>Dropped our existing SVG logo directly into Cursor</li>
+ <li>Provided specific requirements: "I want to create an animation whereby the dots are circles, first appear randomly. So not left to right. And then the lines are drawn from top to bottom. I want this animation to last one second total."</li>
+ <li>The first attempt was too fast</li>
+ <li>The second attempt didn't start from scratch (it was already partially populated)</li>
+ <li>Made adjustments and got it working on attempt 3</li>
+</ul>
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-17-04---Character-Creation-1.jpg" alt="Screenshot at 00:17:04" crossorigin="anonymous"></div>
+
+<h3>Results</h3>
+
+<p>The animation worked as requested - dots appeared randomly rather than sequentially, followed by lines drawing from top to bottom, completing in one second total.
+
+<div class="media-container"><video controls>
+ <source src="https://lt-aitools.github.io/ltait-website/blog/media/Week 19 - 00:18:18 - Character Creation 1.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+
+<h3>Grade: A</h3>
+<p>Quick successful implementation that accomplished exactly what we asked for in just two iterations.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Mid Journey Character Creation and Consistency Testing</h2>
+
+<p>We conducted comprehensive testing of Mid Journey's ability to create consistent characters across multiple iterations, uncovering both impressive capabilities and concerning biases.</p>
+
+<h3>The Challenge</h3>
+
+<p>We wanted to test whether Mid Journey could maintain character consistency - creating the same character in different scenarios while keeping recognizable features.</p>
+
+<h3>Our Testing Approach</h3>
+<ul>
+ <li>Started with a cartoon cheetah character as our base design</li>
+</ul>
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-23-43---Character-Creation-2.jpg" alt="Screenshot at 00:23:43"></div>
+<ul>
+ <li>Used Mid Journey's character reference feature to maintain consistency</li>
+ <li>Tested different "temperature" settings (400 for exact same character vs. 10 for generally similar)</li>
+ <li>Created multiple scenarios: birthday celebration, different poses, various contexts</li>
+</ul>
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-24-27---Character-Creation-3.jpg" alt="Screenshot at 00:24:27"></div>
+
+<h3>Character Consistency Results</h3>
+<ul>
+ <li><strong>Excellent consistency</strong>: When using character reference at temperature 400, we achieved "exact same individual character" results</li>
+ <li><strong>Spot pattern preservation</strong>: For example, Cheeto maintained identical spot patterns across different scenarios</li>
+ <li><strong>Style reference control</strong>: We learned to use style reference to maintain flat cartoon aesthetics vs. unwanted 3D rendering</li>
+ <li><strong>Scenario flexibility</strong>: Successfully generated the same character in different contexts (birthday party, various poses)</li>
+</ul>
+
+<h3>Mascot Creation Process</h3>
+We also experimented with creating a new LTAIT brand-aligned mascot from scratch
+<ul>
+ <li>Asked ChatGPT to suggest mascot concepts based on our business description</li>
+ <li>Selected a "platypus" concept for being "weird, cute, and adaptable"</li>
+ <li>Experimented with different artistic styles: retro cartoon, steampunk</li>
+ <li>Tested various character attributes and scenarios</li>
+ <li>Used Mid Journey's "animate" button feature on static images</li>
+</ul>
+
+<div class="media-container"><video controls>
+ <source src="https://lt-aitools.github.io/ltait-website/blog/media/Week 19 - 00:25:01 - Character Creation 2.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+
+<h3>Gender Challenge We Encountered</h3>
+When trying to create a "female platypus persona," we had difficulty getting clearly female results. Even when specifying "female" and adding details like a lab coat, the results often appeared gender-neutral or masculine. We found that the characters seemed to default to looking more like boys, and creating a clearly female character required more specific prompting.
+
+<h3>What Worked Well</h3>
+
+<p>
+<ul>
+ <li>Character reference system is highly effective for consistency</li>
+ <li>Temperature controls provide good flexibility between exact matches and variations</li>
+ <li>Style reference prevents unwanted artistic interpretation changes</li>
+ <li>Multiple variations per generation give good options to choose from</li>
+</ul>
+
+<div class="media-container"><video controls><source src="https://lt-aitools.github.io/ltait-website/blog/media/Week 19 - 002515 - Clip.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+
+<h3>Grade: A-</h3>
+<p>Excellent technical capabilities for character consistency and reference systems. Minor points deducted for some difficulty in creating clearly female characters when specified.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Mid Journey Video Generation Capabilities</h2>
+
+<p>We tested Mid Journey's animation features to understand how it handles the transition from static images to moving content.</p>
+
+<h3>The Challenge</h3>
+
+<p>After creating consistent character designs, we wanted to explore Mid Journey's video generation capabilities to bring our characters to life with motion.</p>
+
+<h3>Our Testing Process</h3>
+<ul>
+ <li>Used an existing video prompt, and prompted Midjourney to use that look/feel but change what the character did (little girl running on the beach, inspired by Netta's child)</li>
+</ul>
+
+
+<ul>
+ <li>Also tried creating an animation of a hardware company's logo, turning a pipe into the logo</li>
+</ul>
+<ul>
+<li>Generated multiple animation variations to compare quality and effectiveness
+</li>
+</ul>
+<ul>
+ <li>Evaluated the results for smoothness, duration, and overall appeal</li>
+</ul>
+
+<h3>Animation Capabilities</h3>
+
+<p>
+<ul>
+ <li><strong>Simple activation</strong>: The animate button provides easy access to video generation</li>
+ <li><strong>Short duration</strong>: Animations are limited to approximately 5 seconds</li>
+ <li><strong>Quality output</strong>: Generated smooth motion that enhanced the static designs</li>
+ <li><strong>Multiple format options</strong>: Could download as GIF or other video formats</li>
+ <li><strong>Variety generation</strong>: Like static images, provided multiple animation variations per request</li>
+</ul>
+
+<h3>Technical Performance</h3>
+
+<p>
+<ul>
+ <li>Animations maintained character integrity during motion</li>
+ <li>Smooth transitions without obvious artifacts</li>
+ <li>Appropriate motion that enhanced rather than distracted from the character design</li>
+ <li>Good rendering quality suitable for web or presentation use</li>
+</ul>
+
+<h3>Limitations Discovered</h3>
+
+<p>
+<ul>
+ <li><strong>Duration constraints</strong>: 5-second limit restricts storytelling possibilities</li>
+ <li><strong>Limited motion control</strong>: Cannot specify exact animation sequences or timing</li>
+ <li><strong>Basic animation types</strong>: Motion appears to be generated automatically rather than following detailed direction</li>
+</ul>
+
+<h3>Our Assessment</h3>
+
+<p>The animations were smooth and maintained character integrity during motion. While limited to 5 seconds and with no detailed motion control, the feature worked well for creating simple animated versions of our characters.
+
+<div class="section-separator">• • •</div>
+
+<h2>Browser Testing with Claude and MCP Integration</h2>
+
+<p>We tackled website testing this week using Claude's new MCP (Model Context Protocol) integration for browser automation.</p>
+
+<h3>The Challenge</h3>
+
+<p>We needed to test responsive design functionality across different screen sizes for our website's hamburger menu and navigation. 
+
+</strong>:</p>
+<ul>
+ <li>Set up MCP integration with Claude (which was surprisingly straightforward)</li>
+</ul>
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-42-12---Browser-Testing-2.jpg" alt="Screenshot at 00:42:12"></div>
+
+<ul>
+ <li>Asked Claude to create and execute a comprehensive testing strategy</li>
+ <li>The tool automatically generated test plans covering multiple screen sizes and functionality checks</li>
+ <li>It provided detailed reports on what it found during testing</li>
+</ul>
+
+<h3>The Process</h3>
+
+<p>
+<ul>
+ <li>Claude created a structured testing plan without us having to specify the approach</li>
+ <li>It tested responsiveness across tablet and phone screen sizes</li>
+ <li>Performed functionality testing by attempting to click navigation elements</li>
+ <li>Generated detailed reports with pass/fail results and recommendations</li>
+</ul>
+
+<h3>What Worked Well</h3>
+
+<p>The automation aspect was genuinely impressive. We simply asked "how do I test if the hamburger in the header works in different screen sizes?" and Claude immediately started working, creating test plans and executing them systematically.</p>
+
+<h3>The Problem</h3>
+
+<p>While the tool worked beautifully from a process perspective, it gave us completely wrong results. It reported that our navigation was working perfectly when we knew it was broken. Even when we manually verified the issues and reported them back, Claude insisted everything was functioning correctly.<div class="media-container"><video controls>
+ <source src="https://lt-aitools.github.io/ltait-website/blog/media/Week 19 - 00:41:14 - Browser Testing 1.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+
+<h3>Reality Check</h3>
+
+<p>We ended up using Cursor to actually fix the navigation issues. When we fed Claude's "everything is working" report back to Cursor, Cursor immediately identified that Claude was wrong and provided the correct diagnosis.</p>
+
+<h3>Grade: C</h3>
+<p>Excellent automation and testing methodology, but fundamentally unreliable results make it impractical for real-world use. The process is impressive, but accuracy is everything in testing.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Email-to-Calendar Automation with Google Apps Script</h2>
+
+<p>This project emerged from a real friend's need to automate her workflow around a weekly feminist events newsletter in Israel.</p>
+
+<h3>The Business Problem</h3>
+
+<p>Our friend receives a weekly newsletter containing multiple event listings (dates, times, locations, descriptions) and wanted them automatically added to her Google Calendar instead of manually processing each email every week.
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-47-17---Browser-Testing-3.jpg" alt="Screenshot at 00:47:17"></div>
+
+<h3>Our Technical Approach</h3>
+
+<p>We used ChatGPT to design the solution, which recommended Google Apps Script as the optimal platform for Gmail-to-Calendar integration.
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---00-48-14---Browser-Testing-4.jpg" alt="Screenshot at 00:48:14"></div>
+
+<h3>Implementation Steps</h3>
+
+<p>
+<ul>
+ <li>Created prompts to help ChatGPT understand the email format and parsing requirements</li>
+ <li>Generated Google Apps Script code to:</li>
+ <li>Connect to Gmail and identify the specific newsletter emails</li>
+ <li>Parse event information using keyword recognition ("invite" and "link" were key identifiers)</li>
+ <li>Create properly formatted calendar entries with event details and relevant links</li>
+ <li>Handle recurring weekly processing automatically</li>
+</ul>
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---004833---Screenshot.jpg" alt="Screenshot at 00:48:33"></div>
+
+<h3>The Development Process</h3>
+
+<p>We initially made the mistake of not starting with a proper ChatGPT project, leading to some debugging loops. The key breakthrough came when we:
+<ul>
+ <li>Ran out of credits on Claude (forcing us to switch tools)</li>
+ <li>Created a proper ChatGPT project with full context</li>
+ <li>Provided the latest code version and clear problem description</li>
+</ul>
+
+<p>This allowed ChatGPT to immediately understand where we were stuck and provide working solutions.</p>
+
+<h3>Real-World Results</h3>
+
+<p><ul>
+ <li>Successfully processes newsletter emails automatically</li>
+ <li>Creates calendar entries with proper timing (defaulting to 7 PM when specific times aren't available)</li>
+ <li>Includes both registration links and event description links in calendar entries</li>
+ <li>Saves our friend 15-20 minutes of manual work each week</li>
+</ul>
+
+<h3>Future Enhancement Plans</h3>
+
+<p>We want to add functionality to click through event links and extract actual event times, rather than defaulting everything to 7 PM. This would require additional web scraping capabilities.</p>
+
+<h3>Deployment Strategy</h3>
+
+<p>We're planning to share both the script code (for technical users) and a public calendar option (for non-technical users) to maximize accessibility.</p>
+
+<h3>Grade: A+</h3>
+<p>This solved a real problem efficiently with tools that were perfectly suited to the task. The 1 hour 45 minutes of development time created ongoing weekly value, and the Google Apps Script integration was seamless.</p>
+
+<div class="section-separator">• • •</div>
+
+<h2>Component Library Creation from Screenshots</h2>
+
+<p>We explored whether AI could create reusable component libraries from existing website designs, addressing a common challenge in design and development workflows.</p>
+
+<h3>The Concept</h3>
+
+<p>A designer mentioned that creating prototypes with company-specific branding is challenging with AI tools. We wanted to test if we could extract component libraries from screenshots of existing sites and then use those components to build new designs.</p><h3>Our Test Setup</h3>
+
+<p>
+<ul>
+ <li>Used Canva as our test subject (chosen for its distinctive, consistent branding)</li>
+ <li>Took screenshots of various page elements: headers, navigation, hero sections, footers</li>
+ <li>Fed these to Claude with prompts to extract reusable components</li>
+</ul>
+
+<h3>The Process</h3>
+
+<p>
+<ul>
+ <li>Initially, Claude tried to recreate entire pages rather than isolating components</li>
+ <li>After clarifying that we wanted only components, it generated reasonably accurate code representations</li>
+ <li>Successfully identified different UI patterns: buttons, headers, navigation elements, feature sections</li>
+</ul>
+
+<h3>What Worked</h3>
+
+<p>
+<ul>
+ <li>Claude correctly identified and coded many visual elements from the screenshots</li>
+ <li>Generated usable component code that captured Canva's visual style</li>
+ <li>Created organized component libraries with proper categorization</li>
+</ul>
+
+<h3>Limitations We Discovered</h3>
+
+<p>
+<ul>
+ <li>Missing important details like typography specifications (font sizes, weights, etc.)</li>
+ <li>Struggled with contextual elements like dropdown menus that appear on hover</li>
+ <li>Memory limitations caused it to forget the original component library goal when adding new screenshots</li>
+ <li>Spacing and layout issues when attempting to use components to build new pages</li>
+</ul>
+
+<h3>Testing Applications</h3>
+
+<p>We tried using the component library to build:</p>
+<ol>
+<li><strong>Canva Education Hub</strong>: A landing page for educators using Canva's existing style
+</li>
+<li><strong>Jerry's Gelato</strong>: A completely different business using Canva's design aesthetic
+
+<div class="media-container"><img src="https://lt-aitools.github.io/ltait-website/blog/media/Week-19---01-09-48---Component-Library-2.jpg" alt="Screenshot at 01:09:48"></div>
+
+<h3>Results</h3>
+
+<p>Both attempts produced recognizable pages with proper branding elements, but with significant spacing and layout issues that would require manual cleanup.
+
