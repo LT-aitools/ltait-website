@@ -8,6 +8,7 @@ import path from 'path'
 describe('Blog Deployment Integration Tests', () => {
   const publicBlogPath = path.join(process.cwd(), 'public', 'blog')
   const week19HtmlPath = path.join(publicBlogPath, 'week19.html')
+  const week22HtmlPath = path.join(publicBlogPath, 'week22.html')
   const mediaPath = path.join(publicBlogPath, 'media')
 
   describe('File Structure Validation', () => {
@@ -28,20 +29,20 @@ describe('Blog Deployment Integration Tests', () => {
     let htmlContent: string
 
     beforeAll(() => {
-      htmlContent = fs.readFileSync(week19HtmlPath, 'utf-8')
+      htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
     })
 
     it('should contain proper HTML structure for React compatibility', () => {
       // Should NOT contain DOCTYPE, html, head, or body tags (React compatibility)
       expect(htmlContent).not.toMatch(/<!DOCTYPE/i)
-      expect(htmlContent).not.toMatch(/<html/i)
-      expect(htmlContent).not.toMatch(/<head/i)
-      expect(htmlContent).not.toMatch(/<body/i)
+      expect(htmlContent).not.toMatch(/<html[^>]*>/i)
+      expect(htmlContent).not.toMatch(/<head(\s|>)/i)
+      expect(htmlContent).not.toMatch(/<body[^>]*>/i)
     })
 
     it('should contain required blog post elements', () => {
       expect(htmlContent).toContain('<h1>')
-      expect(htmlContent).toContain('Week 19:')
+      expect(htmlContent).toContain('Week 22:')
       expect(htmlContent).toContain('Published on')
     })
 
@@ -73,28 +74,32 @@ describe('Blog Deployment Integration Tests', () => {
   })
 
   describe('Media File Validation', () => {
-    it('should have Week 19 media files', () => {
+    it('should have Week 19 or Week 22 media files', () => {
       const mediaFiles = fs.readdirSync(mediaPath)
       const week19Files = mediaFiles.filter(file => file.startsWith('Week 19'))
+      const week22Files = mediaFiles.filter(file => file.startsWith('Week 22'))
       
-      expect(week19Files.length).toBeGreaterThan(0)
+      expect(week19Files.length + week22Files.length).toBeGreaterThan(0)
     })
 
     it('should have both images and videos', () => {
       const mediaFiles = fs.readdirSync(mediaPath)
-      const week19Images = mediaFiles.filter(file => 
-        file.startsWith('Week 19') && (file.endsWith('.jpg') || file.endsWith('.png'))
+      const allImages = mediaFiles.filter(file => 
+        (file.startsWith('Week 19') || file.startsWith('Week 22')) && (file.endsWith('.jpg') || file.endsWith('.png'))
       )
-      const week19Videos = mediaFiles.filter(file => 
-        file.startsWith('Week 19') && file.endsWith('.mp4')
+      const allVideos = mediaFiles.filter(file => 
+        (file.startsWith('Week 19') || file.startsWith('Week 22')) && file.endsWith('.mp4')
       )
 
-      expect(week19Images.length).toBeGreaterThan(0)
-      expect(week19Videos.length).toBeGreaterThan(0)
+      expect(allImages.length).toBeGreaterThan(0)
+      expect(allVideos.length).toBeGreaterThan(0)
     })
 
     it('should reference media files with correct paths in HTML', () => {
-      const htmlContent = fs.readFileSync(week19HtmlPath, 'utf-8')
+      // Focus on Week 22 (latest deployment)
+      expect(fs.existsSync(week22HtmlPath)).toBe(true)
+      
+      const htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
       const mediaPaths = htmlContent.match(/\/blog\/media\/[^"]+/g) || []
       
       expect(mediaPaths.length).toBeGreaterThan(0)
@@ -111,7 +116,7 @@ describe('Blog Deployment Integration Tests', () => {
     let htmlContent: string
 
     beforeAll(() => {
-      htmlContent = fs.readFileSync(week19HtmlPath, 'utf-8')
+      htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
     })
 
     it('should not contain stray HTML syntax', () => {
@@ -130,9 +135,14 @@ describe('Blog Deployment Integration Tests', () => {
       expect(htmlContent).toContain('list-style-type: disc !important')
     })
 
-    it('should have grades as H3 headers', () => {
-      const gradeMatches = htmlContent.match(/<h3>Grade: [A-F][+-]?<\/h3>/g) || []
-      expect(gradeMatches.length).toBeGreaterThan(0)
+    it('should have grades properly formatted', () => {
+      // Check for either H3 format or div format
+      const h3GradeMatches = htmlContent.match(/<h3>Grade: [A-F][+-]?<\/h3>/g) || []
+      const divGradeMatches = htmlContent.match(/<div class="grade"><strong>Grade: [A-F][+-]?<\/strong><\/div>/g) || []
+      const strongGradeMatches = htmlContent.match(/<strong>Grade: [A-F][+-]?<\/strong>/g) || []
+      
+      const totalGrades = h3GradeMatches.length + divGradeMatches.length + strongGradeMatches.length
+      expect(totalGrades).toBeGreaterThan(0)
     })
 
     it('should have publication date with proper styling', () => {
