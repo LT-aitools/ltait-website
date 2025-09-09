@@ -28,7 +28,7 @@ dist-ssr
 404.html
 assets/
 *.png
-*.jpg
+# *.jpg  # Commented out to allow blog images
 *.ico
 *.svg
 robots.txt
