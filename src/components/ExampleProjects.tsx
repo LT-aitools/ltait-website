@@ -47,9 +47,10 @@ const ExampleProjects = () => {
             <ProjectSubsection subsection={subsections[2]} />
           </div>
           
-          {/* Second column - Coding */}
-          <div className="space-y-6">
+          {/* Second column - Coding and Data */}
+          <div className="space-y-8">
             <ProjectSubsection subsection={subsections[1]} />
+            <ProjectSubsection subsection={subsections[3]} />
           </div>
         </div>
       </div>

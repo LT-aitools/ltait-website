@@ -6,15 +6,12 @@ export const subsections: Subsection[] = [
     title: "Content",
     projects: [
       {
-        title: "Meeting Video to Content (Netta)",
-        description: "We take a Google Meet recording (of our 3-hour meeting) and turn it into a blog post (with screenshots & video clips), a thread for X/BlueSky, and a Linkedin post. Tools used: Granola, Claude, Whisper, Python (Pycharm).",
+        title: "Meeting Video to Content (Charlie & Netta)",
+        description: "We built an automated workflow for Claude Code agents to turn a Google Meet recording (of our 3-hour meeting) into a published blog post (with screenshots & video clips), a thread for X/BlueSky, and a Linkedin post. Tools used: Granola, Claude, Claude Code, Cursor, Whisper, YouTube API",
         links: [
-          { text: "Medium blog post walk-through", url: "#" },
-          { text: "Prompt: Recording analysis", url: "https://docs.google.com/document/d/18lX8vpfq7teqx3ovPdD9rzJzggcvUSOq/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
-          { text: "Prompt: Blog post", url: "https://docs.google.com/document/d/1ieeeRt_Nqr2bGb4rbSpLeGTisdqND7bY/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
-          { text: "Prompt: Social media posts", url: "https://docs.google.com/document/d/1gd9GxJsnLeL67H7aY474YaXTWRJeGywJ/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
-          { text: "Code: Whisper (timestamped transcription)", url: "#" },
-          { text: "Code: Blog post generator", url: "https://docs.google.com/document/d/1gd9GxJsnLeL67H7aY474YaXTWRJeGywJ/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" }
+          { text: "Code: Whisper (timestamped transcription)", url: "https://github.com/LT-aitools/transcript" },
+          { text: "v1 project doc (semi-automated)", url: "https://docs.google.com/document/d/1gd9GxJsnLeL67H7aY474YaXTWRJeGywJ/edit?usp=sharing&ouid=102883591774527281863&rtpof=true&sd=true" },
+          { text: "v2 project doc (automated agents)", url: "https://docs.google.com/document/d/1-TD6evdmGj9sGJNQw9p8jLEsE7w4agRxzoyTMw8rJd4/edit?usp=sharing" }
         ]
       },
       {
@@ -25,7 +22,7 @@ export const subsections: Subsection[] = [
     ]
   },
   {
-    title: "Coding",
+    title: "Vibe Coding",
     projects: [
       {
         title: "The Great Heaven Census (Charlie)",
@@ -37,23 +34,11 @@ export const subsections: Subsection[] = [
         ]
       },
       {
-        title: "Vaginal Discharge Analyzer (Netta)",
-        description: "A web application that helps women analyze vaginal discharge patterns for health monitoring and awareness. The tool provides educational information and assessment features. Tools used: Base44, Claude",
-        links: [
-          { text: "Live site", url: "https://app--women-health-assistant-72fe3b01.base44.app" }
-        ]
-      },
-      {
         title: "Montessori Games Creator (Netta)",
         description: "An interactive platform for creating and accessing Montessori-inspired educational games and activities. The tool helps parents and educators develop customized learning materials. Tools used: GeminiAPI, Lovable, Cursor, Claude",
         links: [
           { text: "Live site", url: "https://montessorigames.letstalkaitools.com/" }
         ]
-      },
-      {
-        title: "Property24 scraper (Charlie)",
-        description: "We scraped a South African property website, to get historical data and new listings for Charlie's Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
-        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
       },
       {
         title: "AI email digest (Netta)",
@@ -66,9 +51,11 @@ export const subsections: Subsection[] = [
         links: [{ text: "[in progress] – links and documents to come!", url: "#" }]
       },
       {
-        title: "Wealthfront vs S&P analysis (Charlie)",
-        description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront's robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
-        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Wealthfront-vs-VOO" }]
+        title: "Vaginal Discharge Analyzer (Netta)",
+        description: "A web application that helps women analyze vaginal discharge patterns for health monitoring and awareness. The tool provides educational information and assessment features. Tools used: Base44, Claude",
+        links: [
+          { text: "Live site", url: "https://app--women-health-assistant-72fe3b01.base44.app" }
+        ]
       },
       {
         title: "Indonesian flashcards web app (Charlie)",
@@ -101,11 +88,31 @@ export const subsections: Subsection[] = [
       },
       {
         title: "Children's book (Charlie)",
-        description: "We created an illustrated children's book featuring Charlie's niece Zoe and a stuffed animal cheetah (Zoe's favorite animal). Tools used: ChatGPT, Readkidz (also tried other tools that were worse)",
+        description: "We created an illustrated children's book featuring Charlie's niece Zoe and a stuffed animal cheetah (Zoe's favorite animal). Did this by stringing together tools in early 2025-- but now would be easy using Google Storybook. Tools used: ChatGPT, Readkidz, Midjourney",
         links: [
           { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/u/0/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit" },
           { text: "Final book (as Kindle ebook!)", url: "https://www.amazon.com/dp/B0F38GJFQC" }
         ]
+      }
+    ]
+  },
+  {
+    title: "Data",
+    projects: [
+      {
+        title: "Messy spreadsheets ETL (Charlie)",
+        description: "We helped a local NGO build an ETL pipeline: from messy spreadsheets into a clean database. As part of this, ran a series of evals against most major LLM models. Tools used: Cursor, OpenAI/Anthropic API, Python",
+        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
+      },
+      {
+        title: "Property24 scraper (Charlie)",
+        description: "We scraped a South African property website, to get historical data and new listings for Charlie's Cape Town neighborhood. Tools used: ChatGPT, Google Colab (Jupyter notebooks), Grok, Google Sheets.",
+        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
+      },
+      {
+        title: "Wealthfront vs S&P analysis (Charlie)",
+        description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront's robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
+        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Wealthfront-vs-VOO" }]
       }
     ]
   }
