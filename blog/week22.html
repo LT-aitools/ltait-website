@@ -1,129 +1,45 @@
-<style>
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    background-color: #fef7f7 !important;
-    line-height: 1.6 !important;
-    max-width: 800px !important;
-    margin: 0 auto !important;
-    padding: 20px !important;
-    color: #333 !important;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 22: From Manual to Automated - Streamlining Our Blog Creation Process</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog-styles.css">
+</head>
+<body>
 
-  h1 {
-    font-size: 2.5em !important;
-    margin-bottom: 0.5em !important;
-    color: #2c3e50 !important;
-  }
+<!-- Site Header -->
+<header class="site-header" id="site-header">
+  <div class="header-container">
+    <a href="/" class="header-logo">
+      <img src="../LTAIT-Logo_plain.png" alt="Let's Talk AI Tools Logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="/#hero" class="nav-link">Home</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#blog" class="nav-link">Blog</a>
+      <a href="/#who" class="nav-link">Who We Are</a>
+      <a href="/#example-projects" class="nav-link">Projects</a>
+    </nav>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
 
-  h2 {
-    font-size: 2em !important;
-    margin-top: 2em !important;
-    margin-bottom: 1em !important;
-    color: #34495e !important;
-    border-bottom: 2px solid #e74c3c !important;
-    padding-bottom: 0.3em !important;
-  }
-
-  h3 {
-    font-size: 1.5em !important;
-    margin-top: 1.5em !important;
-    margin-bottom: 0.8em !important;
-    color: #2c3e50 !important;
-  }
-
-  p {
-    margin-bottom: 1em !important;
-  }
-
-  ul {
-    margin: 1em 0 !important;
-    padding-left: 2em !important;
-  }
-
-  li {
-    margin-bottom: 0.5em !important;
-    list-style-type: disc !important;
-  }
-
-  li::marker {
-    color: #e74c3c !important;
-  }
-
-  strong {
-    font-weight: bold !important;
-    color: #2c3e50 !important;
-  }
-
-  em {
-    font-style: italic !important;
-    color: #7f8c8d !important;
-  }
-
-  .grade {
-    font-size: 1.2em !important;
-    font-weight: bold !important;
-    color: #e74c3c !important;
-    margin: 1em 0 !important;
-  }
-
-  .media-container {
-    margin: 1.5em 0 !important;
-    text-align: center !important;
-    background: transparent !important;
-  }
-
-  .media-container img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-  }
-
-  .media-container video {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-  }
-
-  .section-separator {
-    text-align: center !important;
-    font-size: 1.5em !important;
-    margin: 3em 0 !important;
-    color: #bdc3c7 !important;
-    letter-spacing: 0.5em !important;
-  }
-
-  .publication-info {
-    font-style: italic !important;
-    color: #7f8c8d !important;
-    margin-bottom: 2em !important;
-  }
-
-  .byline {
-    font-style: italic !important;
-    color: #95a5a6 !important;
-    font-size: 0.9em !important;
-    margin-bottom: 2em !important;
-  }
-
-  /* Edit Mode Styles - to help with visibility during editing */
-  .edit-note {
-    background-color: #fff3cd !important;
-    border: 1px solid #ffeaa7 !important;
-    border-radius: 4px !important;
-    padding: 10px !important;
-    margin: 10px 0 !important;
-    font-style: italic !important;
-    color: #856404 !important;
-  }
-</style>
-
+<div class="content-wrapper">
 <article>
   <header>
-    <h1>Week 22: From Manual to Automated - Streamlining Our Blog Creation Process</h1>
+    <div class="week-label">Week 22</div>
+    <h1>From Manual to Automated - Streamlining Our Blog Creation Process</h1>
     <p class="publication-info">Published on September 9, 2025</p>
     <p class="byline">This blog post was written and published by a team of agents under Claude Code, based on a transcript of a meeting between two humans, Netta and Charlie.</p>
+    <div class="header-separator">• • •</div>
   </header>
 
 
@@ -137,7 +53,7 @@
     <p>We finally did what we should have done months ago - actually timed how long our blog creation process takes. Charlie broke down every single step and the results were eye-opening:</p>
 
     <div class="media-container">
-      <img src="https://www.letstalkaitools.com/blog/media/Week-22---00-01-03---Blog-Process-Time-Analysis-1.jpg" alt="Screenshot showing blog process time breakdown">
+      <img src="media/Week-22---00-01-03---Blog-Process-Time-Analysis-1.jpg" alt="Screenshot showing blog process time breakdown">
     </div>
 
     <ul>
@@ -170,13 +86,15 @@
     </ul>
 
     <div class="media-container">
-      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:04:48 - Granola Blog Writing.mp4"></video>
+      <video controls src="media/Week 22 - 00:04:48 - Granola Blog Writing.mp4"></video>
     </div>
 
     <p>The bigger problem was timestamp accuracy. When we asked Granola to suggest timestamps for screenshots and video clips, it was completely wrong. It seemed to think our 100-minute meeting was only an hour long and never suggested timestamps beyond the 60-minute mark.</p>
 
-    <div class="grade"><strong>Grade: C-</strong></div>
-    <p><em>Granola showed promise for basic blog generation but failed completely at the visual content selection that makes our posts engaging.</em></p>
+    <div class="grade">
+      <strong>Grade: C-</strong>
+      <p><em>Granola showed promise for basic blog generation but failed completely at the visual content selection that makes our posts engaging.</em></p>
+    </div>
   </section>
 
   <div class="section-separator">• • •</div>
@@ -189,7 +107,7 @@
     <p>Instead of our usual elaborate prompt chain, we gave Claude just a simple instruction and the raw transcript. The results surprised us - the writing quality was actually better than our original process.</p>
 
     <div class="media-container">
-      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:08:40 - Claude Blog Writing.mp4"></video>
+      <video controls src="media/Week 22 - 00:08:40 - Claude Blog Writing.mp4"></video>
     </div>
 
     <p>We started with a minimal prompt and iteratively refined it:</p>
@@ -201,7 +119,7 @@
     </ol>
 
     <div class="media-container">
-      <img src="https://www.letstalkaitools.com/blog/media/Week-22---00-10-12---Claude-Blog-Writing-2.jpg" alt="Screenshot showing successful Claude blog output">
+      <img src="media/Week-22---00-10-12---Claude-Blog-Writing-2.jpg" alt="Screenshot showing successful Claude blog output">
     </div>
 
     <p>Key improvements we added:</p>
@@ -221,8 +139,10 @@
       <li>Much faster generation time</li>
     </ul>
 
-    <div class="grade"><strong>Grade: A-</strong></div>
-    <p><em>This approach dramatically improved both quality and efficiency. The writing felt more natural and engaging than our previous multi-step process.</em></p>
+    <div class="grade">
+      <strong>Grade: A-</strong>
+      <p><em>This approach dramatically improved both quality and efficiency. The writing felt more natural and engaging than our previous multi-step process.</em></p>
+    </div>
   </section>
 
 
@@ -232,7 +152,7 @@
     <h2>Screenshot Timestamp Automation Attempts</h2>
 
     <div class="media-container">
-      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:06:03 - Screenshot Automation.mp4"></video>
+      <video controls src="media/Week 22 - 00:06:03 - Screenshot Automation.mp4"></video>
     </div>
 
     <h3>The Challenge</h3>
@@ -240,7 +160,7 @@
     <p>The most time-consuming part of our process is finding good screenshots and video clips. We spend 15+ minutes manually scrubbing through recordings to find relevant moments. Could we automate this?</p>
 
     <div class="media-container">
-      <img src="https://www.letstalkaitools.com/blog/media/Week-22---00-06-30---Screenshot-Automation-1.jpg" alt="Screenshot showing timestamp automation interface">
+      <img src="media/Week-22---00-06-30---Screenshot-Automation-1.jpg" alt="Screenshot showing timestamp automation interface">
     </div>
 
     <h3>The Failures</h3>
@@ -266,11 +186,13 @@
     <p>When we flipped the approach and asked Claude to find timestamps for specific topics (rather than describing what happened at each timestamp), it got reasonably close - within 30 seconds of the right moments for most topics.</p>
 
     <div class="media-container">
-      <img src="https://www.letstalkaitools.com/blog/media/Week-22---00-06-44---Screenshot-Automation-2.jpg" alt="Screenshot showing successful timestamp finding approach">
+      <img src="media/Week-22---00-06-44---Screenshot-Automation-2.jpg" alt="Screenshot showing successful timestamp finding approach">
     </div>
 
-    <div class="grade"><strong>Grade: D+</strong></div>
-    <p><em>While we found one approach that worked somewhat, the screenshot automation remains our biggest unsolved challenge.</em></p>
+    <div class="grade">
+      <strong>Grade: D+</strong>
+      <p><em>While we found one approach that worked somewhat, the screenshot automation remains our biggest unsolved challenge.</em></p>
+    </div>
   </section>
 
   <div class="section-separator">• • •</div>
@@ -283,7 +205,7 @@
     <p>Inspired by our successes with direct Claude writing, we decided to build a comprehensive automation system using Claude Code. The goal: fully automate everything from downloading meeting videos to publishing finished blog posts.</p>
 
     <div class="media-container">
-      <video controls src="https://www.letstalkaitools.com/blog/media/Week 22 - 00:15:20 - Claude Code Setup.mp4"></video>
+      <video controls src="media/Week 22 - 00:15:20 - Claude Code Setup.mp4"></video>
     </div>
 
     <h3>The Implementation</h3>
@@ -299,7 +221,7 @@
     <p>The system includes roles for content writers, project managers, and quality reviewers, each with specific expertise and responsibilities.</p>
 
     <div class="media-container">
-      <img src="https://www.letstalkaitools.com/blog/media/Week-22---00-16-27---Claude-Code-Setup-1.jpg" alt="Screenshot showing Claude Code agent setup">
+      <img src="media/Week 22 - 00:16:27 - Claude-Code-Setup-1.jpg" alt="Screenshot showing Claude Code agent setup">
     </div>
 
     <h3>Early Results</h3>
@@ -311,8 +233,10 @@
       <li><strong>Process complexity</strong>: The full automation uses significant Claude Code credits (we hit usage limits during our testing process)</li>
     </ul>
 
-    <div class="grade"><strong>Grade: B</strong></div>
-    <p><em>Ambitious and well-structured, but still needs refinement. The infrastructure is solid, but the output quality needs improvement to match our manual processes.</em></p>
+    <div class="grade">
+      <strong>Grade: B</strong>
+      <p><em>Ambitious and well-structured, but still needs refinement. The infrastructure is solid, but the output quality needs improvement to match our manual processes.</em></p>
+    </div>
   </section>
 
   <div class="section-separator">• • •</div>
@@ -333,3 +257,61 @@
     <p>The goal isn't just to save time - it's to maintain or improve quality while removing the tedious manual work that prevents us from experimenting with more AI tools each week.</p>
   </section>
 </article>
+</div>
+
+<!-- Site Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand">
+          <img src="../LTAIT-Logo_plain.png" alt="Let's Talk AI Tools Logo" />
+          <h3>Let's Talk AI Tools</h3>
+        </div>
+        <p class="footer-description">
+          👩‍💻 Just two product gals (and their chatbots) exploring Gen AI tools
+        </p>
+      </div>
+      
+      <div class="footer-social">
+        <div class="social-links">
+          <a href="https://medium.com/@letstalkaitools" target="_blank" rel="noopener noreferrer" aria-label="Medium" class="social-icon">
+            <svg viewBox="0 0 24 24" height="18" width="18" fill="currentColor">
+              <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/LT-aitools" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://x.com/letstalkaitools" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="https://bsky.app/letstalkaitools" target="_blank" rel="noopener noreferrer" aria-label="BlueSky" class="social-icon">
+            <svg viewBox="0 0 288 288" height="18" width="18" fill="currentColor">
+              <path d="M143.75 52.81a90.94 90.94 0 1 0 91 90.94 90.94 90.94 0 0 0-91-90.94zm-62.87 63A28.12 28.12 0 0 1 109 87.63a28.05 28.05 0 0 1 28.1 28 28.12 28.12 0 0 1-28.1 28.07A28.12 28.12 0 0 1 80.88 115.73zm97.64 76a28.12 28.12 0 0 1-28.07-28.03 28.12 28.12 0 0 1 28.07-28.06 28.09 28.09 0 0 1 28.11 28.06A28.12 28.12 0 0 1 178.52 191.7zm0-55.93a28.12 28.12 0 0 1-28.07-28.04 28.12 28.12 0 0 1 28.07-28.06 28.09 28.09 0 0 1 28.11 28.06 28.12 28.12 0 0 1-28.11 28.04z"/>
+            </svg>
+          </a>
+          <a href="https://bsky.app/profile/letstalkaitools.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+        <p class="footer-copyright">
+          © 2025 Netta & Charlie. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="blog-scripts.js"></script>
+
+</body>
+</html>
