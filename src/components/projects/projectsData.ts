@@ -102,7 +102,6 @@ export const subsections: Subsection[] = [
       {
         title: "Messy spreadsheets ETL (Charlie)",
         description: "We helped a local NGO build an ETL pipeline: from messy spreadsheets into a clean database. As part of this, ran a series of evals against most major LLM models. Tools used: Cursor, OpenAI/Anthropic API, Python",
-        links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Property-24-Colab" }]
       },
       {
         title: "Property24 scraper (Charlie)",
