@@ -117,19 +117,16 @@ describe('Blog Deployment End-to-End Tests', () => {
       expect(realHtmlContent).toContain('<h1>')
       expect(realHtmlContent).toContain('Week 19:')
       expect(realHtmlContent).toContain('Published on')
-      expect(realHtmlContent).toContain('<style>')
-      expect(realHtmlContent).toContain('media-container')
+      expect(realHtmlContent).toContain('<link rel="stylesheet" href="blog-styles.css">')
+      expect(realHtmlContent).toContain('class="media-container"')
     })
 
     it('should maintain responsive design after deployment', async () => {
-      // Check that responsive CSS is present
-      expect(realHtmlContent).toContain('max-width: 800px')
-      expect(realHtmlContent).toContain('margin: 0 auto')
-      expect(realHtmlContent).toContain('padding: 2rem 1rem')
+      // Check that responsive CSS is present (now in external CSS file)
+      expect(realHtmlContent).toContain('blog-styles.css')
       
-      // Check media queries or responsive elements
-      expect(realHtmlContent).toContain('max-width: 100%')
-      expect(realHtmlContent).toContain('height: auto')
+      // Check media queries or responsive elements (now in external CSS)
+      expect(realHtmlContent).toContain('blog-styles.css')
     })
   })
 

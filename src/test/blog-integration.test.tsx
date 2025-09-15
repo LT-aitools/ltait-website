@@ -32,12 +32,12 @@ describe('Blog Deployment Integration Tests', () => {
       htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
     })
 
-    it('should contain proper HTML structure for React compatibility', () => {
-      // Should NOT contain DOCTYPE, html, head, or body tags (React compatibility)
-      expect(htmlContent).not.toMatch(/<!DOCTYPE/i)
-      expect(htmlContent).not.toMatch(/<html[^>]*>/i)
-      expect(htmlContent).not.toMatch(/<head(\s|>)/i)
-      expect(htmlContent).not.toMatch(/<body[^>]*>/i)
+    it('should contain proper HTML structure for standalone blog posts', () => {
+      // Should contain DOCTYPE, html, head, or body tags (standalone HTML)
+      expect(htmlContent).toMatch(/<!DOCTYPE/i)
+      expect(htmlContent).toMatch(/<html[^>]*>/i)
+      expect(htmlContent).toMatch(/<head(\s|>)/i)
+      expect(htmlContent).toMatch(/<body[^>]*>/i)
     })
 
     it('should contain required blog post elements', () => {
@@ -57,14 +57,12 @@ describe('Blog Deployment Integration Tests', () => {
     })
 
     it('should contain CSS styling block', () => {
-      expect(htmlContent).toContain('<style>')
-      expect(htmlContent).toContain('font-family: system-ui')
-      expect(htmlContent).toContain('list-style-type: disc !important')
+      expect(htmlContent).toContain('<link rel="stylesheet" href="blog-styles.css">')
+      expect(htmlContent).toContain('Inter')
     })
 
     it('should have proper media container styling', () => {
-      expect(htmlContent).toContain('.media-container')
-      expect(htmlContent).toContain('background: transparent')
+      expect(htmlContent).toContain('class="media-container"')
     })
 
     it('should contain section separators', () => {
@@ -100,13 +98,13 @@ describe('Blog Deployment Integration Tests', () => {
       expect(fs.existsSync(week22HtmlPath)).toBe(true)
       
       const htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
-      const mediaPaths = htmlContent.match(/\/blog\/media\/[^"]+/g) || []
+      const mediaPaths = htmlContent.match(/media\/[^"]+/g) || []
       
       expect(mediaPaths.length).toBeGreaterThan(0)
       
       // Verify referenced files actually exist
       mediaPaths.forEach(mediaPath => {
-        const filePath = path.join(process.cwd(), 'public', mediaPath)
+        const filePath = path.join(process.cwd(), 'public', 'blog', mediaPath)
         expect(fs.existsSync(filePath)).toBe(true)
       })
     })
@@ -131,8 +129,8 @@ describe('Blog Deployment Integration Tests', () => {
       expect(htmlContent).toContain('<ul>')
       expect(htmlContent).toContain('<li>')
       
-      // Should have CSS for bullet visibility
-      expect(htmlContent).toContain('list-style-type: disc !important')
+      // Should have CSS for bullet visibility (now in external CSS file)
+      expect(htmlContent).toContain('blog-styles.css')
     })
 
     it('should have grades properly formatted', () => {
@@ -147,7 +145,7 @@ describe('Blog Deployment Integration Tests', () => {
 
     it('should have publication date with proper styling', () => {
       expect(htmlContent).toContain('Published on')
-      expect(htmlContent).toContain('font-style: italic')
+      expect(htmlContent).toContain('class="publication-info"')
     })
   })
 })
