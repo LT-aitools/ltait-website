@@ -38,19 +38,19 @@ const ExampleProjects = () => {
         <h2 className="section-title mb-12">Example Projects and Links</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* First column - Content and Visual */}
+          {/* First column - Content and Data */}
           <div className="space-y-8">
             {/* Content subsection */}
             <ProjectSubsection subsection={subsections[0]} />
             
-            {/* Visual subsection */}
-            <ProjectSubsection subsection={subsections[2]} />
+            {/* Data subsection */}
+            <ProjectSubsection subsection={subsections[3]} />
           </div>
           
-          {/* Second column - Coding and Data */}
+          {/* Second column - Vibe Coding and Visuals */}
           <div className="space-y-8">
             <ProjectSubsection subsection={subsections[1]} />
-            <ProjectSubsection subsection={subsections[3]} />
+            <ProjectSubsection subsection={subsections[2]} />
           </div>
         </div>
       </div>
