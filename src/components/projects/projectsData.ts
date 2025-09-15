@@ -15,6 +15,15 @@ export const subsections: Subsection[] = [
         ]
       },
       {
+        title: "SA Daily News Podcast (Charlie)",
+        description: "We built a Github workflow to pull from South African RSS news feeds and scrape newsletters, use that data to write a podcast transcript using Gemini API, and finally turn that into an mp3 with the Azure Speech API. Finally, we (manually) submitted the RSS feed link to podcast platforms, so it's searchable on most podcast apps. Tools used: Claude, Cursor, Azure Speech, Pixabay, Vercel",
+        links: [
+          { text: "Podcast website (stream an episode!)", url: "mzansi-podcast.letstalkaitools.com" },
+          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1FLUfPBhjS8Ymz834HkERXYXsqwcKeHizboMjUy4tE8Q/edit?usp=sharing" },
+          { text: "Code: Github repo", url: "https://github.com/LT-aitools/sa-news-podcast" }
+        ]
+      },
+      {
         title: "Business landscape & opportunity PPT summary (Netta)",
         description: "We researched & summarized the state of digital health services in the mental health space, and summarized it in a PPT, branded for a specific company. Tools used: ChatGPT, Perplexity, Gamma",
         links: [{ text: "Resulting PPT (using Gamma)", url: "https://docs.google.com/presentation/d/1-Emntra93wUaJAeY3alR-tIkc9Fkosgm/edit?slide=id.p1#slide=id.p1" }]
@@ -68,17 +77,8 @@ export const subsections: Subsection[] = [
     ]
   },
   {
-    title: "Visuals & Audio",
+    title: "Visuals",
     projects: [
-      {
-        title: "SA Daily News Podcast (Charlie)",
-        description: "We built a Github workflow to pull from South African RSS news feeds and scrape newsletters, use that data to write a podcast transcript using Gemini API, and finally turn that into an mp3 with the Azure Speech API. Finally, we (manually) submitted the RSS feed link to podcast platforms, so it's searchable on most podcast apps. Tools used: Claude, Cursor, Azure Speech, Pixabay, Vercel",
-        links: [
-          { text: "Podcast website (stream an episode!)", url: "mzansi-podcast.letstalkaitools.com" },
-          { text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1FLUfPBhjS8Ymz834HkERXYXsqwcKeHizboMjUy4tE8Q/edit?usp=sharing" },
-          { text: "Code: Github repo", url: "https://github.com/LT-aitools/sa-news-podcast" }
-        ]
-      },
       {
         title: "Duo portraits (Charlie)",
         description: "We created different AI-generated \"duo portraits\" of Netta and Charlie together. We wanted a range of both illustrated and photorealistic ones. Tools used: Many (most were terrible) but best were Artbreeder, Faceswapper.io, and Lensa AI. ",
