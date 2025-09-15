@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export type Project = {
   title: string;
   description: string;
-  links: { text: string; url: string }[];
+  links?: { text: string; url: string }[];
 };
 
 type ProjectCardProps = {
@@ -28,21 +28,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </CardHeader>
       <CardContent>
         <p className="mb-4 text-charcoal/90">{project.description}</p>
-        <ul className="space-y-2">
-          {project.links.map((link, linkIndex) => (
-            <li key={linkIndex}>
-              <a 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
-              >
-                <ExternalLink size={16} className="mr-1" />
-                <span>{link.text}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        {project.links && project.links.length > 0 && (
+          <ul className="space-y-2">
+            {project.links.map((link, linkIndex) => (
+              <li key={linkIndex}>
+                <a 
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center text-hot-pink hover:text-hot-pink/80 transition-colors"
+                >
+                  <ExternalLink size={16} className="mr-1" />
+                  <span>{link.text}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </CardContent>
     </Card>
   );

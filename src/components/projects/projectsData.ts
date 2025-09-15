@@ -42,8 +42,7 @@ export const subsections: Subsection[] = [
       },
       {
         title: "AI email digest (Netta)",
-        description: "We connected to a news API to set up & trigger a daily email digest on AI-related information. Tools used: Claude, Terminal",
-        links: []
+        description: "We connected to a news API to set up & trigger a daily email digest on AI-related information. Tools used: Claude, Terminal"
       },
       {
         title: "Health & food tracker (Netta)",
