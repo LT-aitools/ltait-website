@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <img 
-                src="LTAIT-Logo_plain.png" 
+                src="/LTAIT-Logo_plain.png" 
                 alt="Let's Talk AI Tools Logo" 
                 className="h-10 w-auto mr-3" 
               />
