@@ -23,12 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 
+# Secrets
+*.env
+client_secret.json
+
 # Built files (for deployment)
 # index.html
 404.html
 assets/
-*.png
-# *.jpg  # Commented out to allow blog images
 *.ico
 *.svg
 robots.txt
