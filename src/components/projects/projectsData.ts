@@ -99,6 +99,10 @@ export const subsections: Subsection[] = [
     title: "Data",
     projects: [
       {
+        title: "Automating Employee Drive Reports with VBA in Excel (Netta)",
+        description: "We built an Excel VBA macro that automates monthly manual work to map and calculate miles driven per employee, distinguishing between personal and work-related usage. Includes a button to email all employees their total monthly kilometers driven over the past year for progress tracking. Tools used: ChatGPT, Claude",
+      },
+      {
         title: "Messy spreadsheets ETL (Charlie)",
         description: "We helped a local NGO build an ETL pipeline: from messy spreadsheets into a clean database. As part of this, ran a series of evals against most major LLM models. Tools used: Cursor, OpenAI/Anthropic API, Python",
       },
@@ -111,10 +115,6 @@ export const subsections: Subsection[] = [
         title: "Wealthfront vs S&P analysis (Charlie)",
         description: "We ran a financial what-if analysis, to understand whether it would have been better to invest in VOO (a S&P 500 ETF) versus using Wealthfront's robo-advisor. Tools used: ChatGPT, Grok, Python (Pycharm)",
         links: [{ text: "Code: Github repo", url: "https://github.com/LT-aitools/Wealthfront-vs-VOO" }]
-      },
-      {
-        title: "Automating Employee Drive Reports with VBA in Excel (Netta)",
-        description: "We built an Excel VBA macro that automates monthly manual work to map and calculate miles driven per employee, distinguishing between personal and work-related usage. Includes a button to email all employees their total monthly kilometers driven over the past year for progress tracking. Tools used: ChatGPT, Claude",
       }
     ]
   }
