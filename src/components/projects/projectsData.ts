@@ -67,7 +67,6 @@ export const subsections: Subsection[] = [
       {
         title: "Health & food tracker (Netta)",
         description: "We built a way to WhatsApp a phone number information about your exercise/food and have it automatically log it. You could then receive a weekly summary by WhatsApp, or log on to an interface to review your logged & summarized stats. Tools used: Claude, Lovable, Airtable, Twilio, Heroku",
-        links: [{ text: "[in progress] – links and documents to come!", url: "#" }]
       },
       {
         title: "Vaginal Discharge Analyzer (Netta)",
