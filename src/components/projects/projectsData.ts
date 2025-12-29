@@ -34,6 +34,13 @@ export const subsections: Subsection[] = [
     title: "Vibe Coding",
     projects: [
       {
+        title: "Rent vs Buy Warehouse Tool (Netta)",
+        description: "An interactive tool that enables live inputs of data fields required to make a financial assessment of whether to buy or rent a warehouse. Includes visualizations and Excel outputs. The tool connects to Bank APIs when available to pull interest rates, property tax rates, inflation rates, corporate tax rates, etc. Tools used: Claude Code, Claude, Streamlit",
+        links: [
+          { text: "Live site", url: "https://rent-vs-buy-decision-tool.streamlit.app/" }
+        ]
+      },
+      {
         title: "The Great Heaven Census (Charlie)",
         description: "A speculative interactive model (web app) that allows users to estimate the human and canine population of heaven, by choosing a Western religious doctrine, adjudicating on some theological edge cases, and deciding whether all or only good dogs go to heaven. Data is as accurate as possible. (Also: find the dog party easter egg.) Tools used: ChatGPT, Perplexity, Lovable, Cursor, Supabase, Vercel",
         links: [
