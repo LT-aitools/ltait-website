@@ -80,6 +80,13 @@ export const subsections: Subsection[] = [
     title: "Visuals",
     projects: [
       {
+        title: "Zvi Ram Comic Book (Netta)",
+        description: "We converted six hours of audio recording into a visual comic book telling the story of Zvi Ram's life in the context of Israel's history. Tools used: Claude, ChatGPT (GPT for Comic Books), Preview",
+        links: [
+          { text: "Project demo video", url: "https://www.loom.com/share/d55a11d35e7c45f69ae4db5a63ae574f" }
+        ]
+      },
+      {
         title: "Duo portraits (Charlie)",
         description: "We created different AI-generated \"duo portraits\" of Netta and Charlie together. We wanted a range of both illustrated and photorealistic ones. Tools used: Many (most were terrible) but best were Artbreeder, Faceswapper.io, and Lensa AI. ",
         links: [{ text: "Project file (including prompts, screenshots, dead ends)", url: "https://docs.google.com/document/d/1Ns1xCSyxwW091qcOmSM5XOMib23ZHrBhuszg3KpFcmQ/edit?usp=sharing" }
