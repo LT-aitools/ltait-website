@@ -41,6 +41,10 @@ export const subsections: Subsection[] = [
         ]
       },
       {
+        title: "Newsletter Calendarization (Netta)",
+        description: "We built a tool that checks email for a weekly newsletter about Feminist Events a few times a week, reads it, opens all registration and event detail links (with Mailchimp redirects), OCRs the links (including Hebrew text), and creates a calendar invite with all the details that people can subscribe to. Tools used: Claude (prompt creation), Cursor (final version), Google Apps Script (can't open Mailchimp redirects), LindyAI (built successfully, but need to pay a monthly fee), Cloud Vision API (for Hebrew OCR)",
+      },
+      {
         title: "The Great Heaven Census (Charlie)",
         description: "A speculative interactive model (web app) that allows users to estimate the human and canine population of heaven, by choosing a Western religious doctrine, adjudicating on some theological edge cases, and deciding whether all or only good dogs go to heaven. Data is as accurate as possible. (Also: find the dog party easter egg.) Tools used: ChatGPT, Perplexity, Lovable, Cursor, Supabase, Vercel",
         links: [
