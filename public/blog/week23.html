@@ -76,7 +76,6 @@
     <div class="week-label">Week 23</div>
     <h1><strong>Week 23:</strong> Market Research Deep Dives and Security Wake-Up Calls</h1>
     <p class="publication-info">Published on December 31, 2025</p>
-    <div class="header-separator">• • •</div>
   </header>
 
 <p><em>This blog post was written and published by a team of agents under Claude Code, based on a transcript of a meeting between two humans, Netta and Charlie.</em></p>
@@ -87,17 +86,17 @@
 
 <h2>Market Research with ChatGPT Deep Research vs. Claude</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>We wanted to validate whether turning our AI experimentation into a consultancy made financial sense. This meant understanding the competitive landscape, pricing models, and market demand without spending weeks on manual research.</p>
 
-<p><strong>Our Approach</strong></p>
+<h3>Our Approach</h3>
 
 <p>We started by asking Claude (regular, not deep research) what market validation steps we should take. It suggested a weekly schedule of what to progressively research, with "pricing" at week four. We pushed back: if someone's considering quitting their job for this, we need pricing information upfront.</p>
 
 <p>We then took the same research prompt and fed it to both ChatGPT Deep Research and Claude Deep Research.</p>
 
-<p><strong>Results</strong></p>
+<h3>Results</h3>
 
 <div class="media-container"><video controls>
  <source src="media/Week 23 - 000320 - 1 Market Research.mp4" type="video/mp4">
@@ -121,7 +120,7 @@
 
 <p>Interestingly, where the two models did provide pricing, the numbers were slightly different.</p>
 
-<p><strong>Key Takeaways</strong></p>
+<h3>Key Takeaways</h3>
 
 <p>From the research, we learned:</p>
 <ul>
@@ -141,11 +140,11 @@
 
 <h2>The Great LinkedIn Job Scraping Disaster</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>When initially researching "Is there a (well-paid) market for AI build consultancies?" ChatGPT suggested we look to job postings as a proxy answer. What kind of AI enablement/consultant roles were companies are explicitly hiring for... and what does compensation look like for those roles? So we turned to AI tools for help gatherting that data. The plan: scrape job listings from LinkedIn and Indeed, extract key information (company, role summary, compensation, key skills), and compile it all into a spreadsheet for analysis.</p>
 
-<p><strong>Attempt 1: ChatGPT Agent Mode</strong></p>
+<h3>Attempt 1: ChatGPT Agent Mode</h3>
 
 <p>First confusion: we were on web ChatGPT, but the agent said it needed to take over our browser, so we should use the desktop app. We switched to desktop. Then it said it needed to be on web. Back to web we went.</p>
 
@@ -163,7 +162,7 @@
 
 <p>We watched it loop six times. At that point, we got nervous it might accidentally send LinkedIn messages to random people and bailed on LinkedIn entirely.</p>
 
-<p><strong>Attempt 2: Indeed with ChatGPT Agent</strong></p>
+<h3>Attempt 2: Indeed with ChatGPT Agent</h3>
 
 <p>We switched to Indeed. The agent navigated there but then... just sat on the page. For several minutes. With a very short job description visible.</p>
 
@@ -179,7 +178,7 @@
 
 <p>Speed: 7 minutes per job. That's completely unusable.</p>
 
-<p><strong>Attempt 3: Manual Copy-Paste + ChatGPT</strong></p>
+<h3>Attempt 3: Manual Copy-Paste + ChatGPT</h3>
 
 <p>We gave up on automation and manually copy-pasted the text from job listings from LinkedIn, putting them into a Google Doc. After collecting about 60 job listings in a document, we asked ChatGPT to extract the information into a spreadsheet.</p>
 
@@ -189,7 +188,7 @@
 
 <p>When we asked why, it admitted it had switched from "reading and writing" to "keyword scraping" to go faster. We told it to reprocess everything properly. It said it would... and then nothing happened for 10 minutes. When we asked if it was still working, it admitted it can't work silently in the background after we send a message.</p>
 
-<p><strong>Attempt 4: Warp (Claude-powered Terminal)</strong></p>
+<h3>Attempt 4: Warp (Claude-powered Terminal)</h3>
 
 <p>We switched to Warp, powered by Claude. We gave it the same document and asked it to parse the job listings into the same spreadsheet.</p>
 
@@ -203,7 +202,7 @@
 
 <p>For about 60 jobs, this took approximately 15 minutes.</p>
 
-<p><strong>Attempt 5: Claude Code with Parallel Agents</strong></p>
+<h3>Attempt 5: Claude Code with Parallel Agents</h3>
 
 <p>We moved to Claude Code and asked if we could split the work across parallel agents to speed things up. It said yes and gave us a time estimate.</p>
 
@@ -226,11 +225,11 @@
 
 <p>Eventually we gave up. The fundamental problem: Claude Code wants to code. When it wrote code, it was fast but low quality. When it didn't write code (like Warp), it was high quality but slow and asked for constant approvals.</p>
 
-<p><strong>What Actually Worked</strong></p>
+<h3>What Actually Worked</h3>
 
 <p>Warp's approach: actually reading each job, writing original summaries, and extracting information thoughtfully. It took 15 minutes for 60 jobs with manual approvals every few jobs, but the output was usable.</p>
 
-<p><strong>What Didn't Work</strong></p>
+<h3>What Didn't Work</h3>
 
 <ul>
  <li>ChatGPT Agent mode on complex websites (got stuck on UI elements)</li>
@@ -245,17 +244,17 @@
 
 <h2>PhD Program Research with Deep Research</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>A friend wanted to find PhD programs where she could focus on dance movement, using motion capture and movement tracking. Her ideal program would combine arts, technology, and research. Which universities should she look at?</p>
 
-<p><strong>Our Approach</strong></p>
+<h3>Our Approach</h3>
 
 <p>We started with a meeting where she explained what she was looking for. We used both the meeting transcript and Whisper to extract her explanation, then used that with prompt engineering to create a detailed research prompt. The prompt specified we wanted a table with columns for: program name, funding, specializations, deadline, key faculty member, residency requirements, and visa requirements.</p>
 
 <p>We tested this prompt across ChatGPT Deep Research, Claude Deep Research, and Perplexity.</p>
 
-<p><strong>Perplexity Results</strong></p>
+<h3>Perplexity Results</h3>
 
 <p>Perplexity started assembling and verifying opportunities. It found 7 programs and created an initial list... then got stuck. The prompt specifically asked for a table, but it wouldn't create one. It kept updating those same 7 programs instead of finding more. We kept asking if it was still working. It would say yes, it's working on it. But nothing was happening.</p>
 
@@ -263,7 +262,7 @@
 
 <p>The format was not what we requested and it seemed unable to move past its initial "best highlights" approach.</p>
 
-<p><strong>Claude Deep Research Results</strong></p>
+<h3>Claude Deep Research Results</h3>
 
 <div class="media-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/8lTOXJUx5as" title="Week 23 - PhD Program Research" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -271,7 +270,7 @@
 
 <p>The friend recognized some programs from her initial search but also discovered new ones she didn't know about.</p>
 
-<p><strong>ChatGPT Deep Research Results</strong></p>
+<h3>ChatGPT Deep Research Results</h3>
 
 <p>ChatGPT did the best job overall. It created a comprehensive Excel spreadsheet that it allowed us to download (rather than just showing results). The spreadsheet included:</p>
 <ul>
@@ -288,7 +287,7 @@
 
 <p>We ended up combining the Claude and ChatGPT lists, asking one of them to merge and deduplicate the results into a single comprehensive spreadsheet.</p>
 
-<p><strong>What This Would Have Looked Like Manually</strong></p>
+<h3>What This Would Have Looked Like Manually</h3>
 
 <p>We both remembered doing this exact task for our own graduate school applications. Creating a spreadsheet like this manually would have been extremely time-consuming. The AI did it in minutes while we did other things.</p>
 
@@ -298,11 +297,11 @@
 
 <h2>Security Training: SafeVibes and Row-Level Security</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>We attended a lecture about secure coding practices when using AI tools, especially no-code platforms like Supabase. The presenter was from SafeVibes, and they'd discovered that most AI-generated apps have serious security vulnerabilities.</p>
 
-<p><strong>What We Learned</strong></p>
+<h3>What We Learned</h3>
 
 <div class="media-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZMB_Xxb7XfA" title="Week 23 - Security Training" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -316,7 +315,7 @@
 
 <p>These should be separate permissions. The fact that Supabase groups "write" and "delete" together is itself a security issue—sometimes you want people to submit data but never delete anything (like a lead form).</p>
 
-<p><strong>Common Vulnerabilities</strong></p>
+<h3>Common Vulnerabilities</h3>
 
 <ol>
  <li><strong>Public read access on contact forms</strong>: If you don't restrict read access, anyone filling out your contact form can see everyone else's submissions. Supabase now shows a warning when you publish if you haven't done security checks, but it should be the default.</li>
@@ -332,7 +331,7 @@
  <li><strong>Exposed API prompts</strong>: If your app makes AI API calls from the frontend, the prompt and API key might be visible in browser inspection tools. Backend functions should not be exposed.</li>
 </ol>
 
-<p><strong>SafeVibes.codes</strong></p>
+<h3>SafeVibes.codes</h3>
 
 <p>The presenters created a tool at SafeVibes.codes. You give it your app URL, and it pretends to be a malicious user, testing what data it can access. It then shows you:</p>
 <ul>
@@ -345,11 +344,11 @@
 
 <p>The workflow: test your app with SafeVibes, review the vulnerabilities, try to fix them yourself, and if you can't, bring in an expert.</p>
 
-<p><strong>MCP for Cursor</strong></p>
+<h3>MCP for Cursor</h3>
 
 <p>SafeVibes also created an MCP (Model Context Protocol) server for Cursor that scans your code as you write it and warns you about security issues in real-time. We haven't tried it yet but it seems incredibly useful.</p>
 
-<p><strong>Implications for Our Work</strong></p>
+<h3>Implications for Our Work</h3>
 
 <p>This applies to everything we build with Cursor, Claude, and AI tools:</p>
 <ul>
@@ -368,17 +367,17 @@
 
 <h2>PDF Scraping and Merging with Claude Code</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>We wanted to print out music notation sheets for flute practice. A website had links to 156 individual PDF files organized in different sections. Clicking each link, downloading each PDF, and then printing them all would take forever.</p>
 
-<p><strong>ChatGPT Agent Attempt</strong></p>
+<h3>ChatGPT Agent Attempt</h3>
 
 <p>We tried: "Create a folder in Downloads called 'music notes', go to this website, click on all the links, and save the PDFs in the folder."</p>
 
 <p>It said it couldn't create folders or download files.</p>
 
-<p><strong>Claude Code Success</strong></p>
+<h3>Claude Code Success</h3>
 
 <p>We gave Claude Code the same task. It:</p>
 <ol>
@@ -398,7 +397,7 @@
 
 <p>It found all 156 PDFs, downloaded them, and had a small issue it fixed itself. Then it reported finding only 72 files. We reminded it that there were 156. It went back, checked, and found all 156 successfully.</p>
 
-<p><strong>Going Further</strong></p>
+<h3>Going Further</h3>
 
 <p>We then asked it to merge all the PDFs into one file and add page numbers. It wrote the code to do that in seconds and created a merged PDF with page numbers at the bottom of each page.</p>
 
@@ -406,11 +405,11 @@
 
 <p>Then we got more complicated: we only wanted specific sections from the website (not all 156). We gave it the URL of the first item in section 1, the last item in section 1, the first item in section 2, and the last item in section 2. With those four URLs as boundaries, it successfully extracted just those two sections and created a merged PDF ready for printing.</p>
 
-<p><strong>Speed Comparison</strong></p>
+<h3>Speed Comparison</h3>
 
 <p>ChatGPT Agent failed at this task. Claude Code did everything (scraping, downloading, merging, adding page numbers) in about 2 minutes.</p>
 
-<p><strong>Why This Matters</strong></p>
+<h3>Why This Matters</h3>
 
 <p>Tools like SmallPDF charge money for PDF merging and compression. Claude Code did it for free, along with the scraping and organization. The code it wrote could be reused for any similar task.</p>
 
@@ -420,11 +419,11 @@
 
 <h2>Blog Agent Workflow Improvements</h2>
 
-<p><strong>The Challenge</strong></p>
+<h3>The Challenge</h3>
 
 <p>Our previous blog post creation process was painful: manually download videos, run transcripts, write posts, extract screenshots, format HTML, publish to website. We'd built an automated workflow with Claude Code but it had quality issues and required too much manual intervention.</p>
 
-<p><strong>Improvements Made</strong></p>
+<h3>Improvements Made</h3>
 
 <ol>
  <li><strong>Content Writer vs. Content Marketer</strong>: We changed the writer agent's role from "content marketer" to "content writer" which noticeably improved writing quality.</li>
@@ -442,7 +441,7 @@
  <li><strong>Pre-commit Hooks</strong>: When we reminded it to run pre-commit hooks, it caught errors and even discovered we needed a 404 page (which it created—and we really like our 404 page now).</li>
 </ol>
 
-<p><strong>Week 22 Test Run</strong></p>
+<h3>Week 22 Test Run</h3>
 
 <p>We tested the improved workflow on Week 22 (which was easier than normal since we only discussed one project that week).</p>
 
@@ -456,7 +455,7 @@
 
 <div class="media-container"><img src="media/Week 23 - 011855 - 6 Blog Agent Workflow Improve.jpg" alt="Blog Agent Workflow" crossorigin="anonymous"></div>
 
-<p><strong>Manual Approvals Required:</strong></p>
+<h3>Manual Approvals Required:</h3>
 <ul>
  <li>Three approvals in the first few minutes</li>
  <li>Approval for media asset extraction</li>
@@ -470,14 +469,14 @@
 
 <p>This was more approvals than expected. We need to investigate that "dangerously don't ask for permissions" flag that some people use, possibly with a whitelist of allowed operations.</p>
 
-<p><strong>Timing:</strong></p>
+<h3>Timing:</h3>
 <ul>
  <li>The workflow took about 70 minutes total</li>
  <li>Only 15 minutes required actual human attention (reviewing and editing)</li>
  <li>The rest ran in the background with occasional approval clicks</li>
     </ul>
 
-<p><strong>Quality:</strong></p>
+<h3>Quality:</h3>
 <ul>
  <li>Screenshots and videos were good quality</li>
  <li>They weren't always in exactly the right place (maybe should be two bullet points down) but close enough</li>
@@ -487,10 +486,10 @@
 
 <div class="media-container"><img src="media/Week 23 - 012402 - 6 Blog Agent Workflow Improve.jpg" alt="Blog Agent Workflow" crossorigin="anonymous"></div>
 
-<p><strong>Deployment Issues:</strong></p>
+<h3>Deployment Issues:</h3>
 <p>We hit the same image-loading problems we'd had before. It took several hours of troubleshooting to discover issues like .gitignore blocking JPEGs. Eventually we got it working and published.</p>
 
-<p><strong>Next Steps:</strong></p>
+<h3>Next Steps:</h3>
 <ul>
  <li>Clean up image file organization (unclear why files are in multiple places)</li>
  <li>Fix blog UI</li>
@@ -500,7 +499,7 @@
  <li>Make the workflow more efficient to avoid hitting the 5-hour limit</li>
     </ul>
 
-<p><strong>Remaining Concerns:</strong></p>
+<h3>Remaining Concerns:</h3>
 <ul>
  <li>The workflow still asks for unexpected approvals</li>
  <li>We're not sure it will transfer smoothly to Netta's computer (file paths, etc.)</li>
