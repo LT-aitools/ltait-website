@@ -8,7 +8,7 @@ import path from 'path'
 describe('Blog Deployment Integration Tests', () => {
   const publicBlogPath = path.join(process.cwd(), 'public', 'blog')
   const week19HtmlPath = path.join(publicBlogPath, 'week19.html')
-  const week22HtmlPath = path.join(publicBlogPath, 'week22.html')
+  const week23HtmlPath = path.join(publicBlogPath, 'week23.html')
   const mediaPath = path.join(publicBlogPath, 'media')
 
   describe('File Structure Validation', () => {
@@ -29,7 +29,7 @@ describe('Blog Deployment Integration Tests', () => {
     let htmlContent: string
 
     beforeAll(() => {
-      htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
+      htmlContent = fs.readFileSync(week23HtmlPath, 'utf-8')
     })
 
     it('should contain proper HTML structure for standalone blog posts', () => {
@@ -42,7 +42,7 @@ describe('Blog Deployment Integration Tests', () => {
 
     it('should contain required blog post elements', () => {
       expect(htmlContent).toContain('<h1>')
-      expect(htmlContent).toContain('Week 22:')
+      expect(htmlContent).toContain('Week 23:')
       expect(htmlContent).toContain('Published on')
     })
 
@@ -83,10 +83,10 @@ describe('Blog Deployment Integration Tests', () => {
     it('should have both images and videos', () => {
       const mediaFiles = fs.readdirSync(mediaPath)
       const allImages = mediaFiles.filter(file => 
-        (file.startsWith('Week 19') || file.startsWith('Week 22')) && (file.endsWith('.jpg') || file.endsWith('.png'))
+        (file.startsWith('Week 19') || file.startsWith('Week 23')) && (file.endsWith('.jpg') || file.endsWith('.png'))
       )
       const allVideos = mediaFiles.filter(file => 
-        (file.startsWith('Week 19') || file.startsWith('Week 22')) && file.endsWith('.mp4')
+        (file.startsWith('Week 19') || file.startsWith('Week 23')) && file.endsWith('.mp4')
       )
 
       expect(allImages.length).toBeGreaterThan(0)
@@ -94,10 +94,10 @@ describe('Blog Deployment Integration Tests', () => {
     })
 
     it('should reference media files with correct paths in HTML', () => {
-      // Focus on Week 22 (latest deployment)
-      expect(fs.existsSync(week22HtmlPath)).toBe(true)
-      
-      const htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
+      // Focus on Week 23 (latest deployment)
+      expect(fs.existsSync(week23HtmlPath)).toBe(true)
+
+      const htmlContent = fs.readFileSync(week23HtmlPath, 'utf-8')
       const mediaPaths = htmlContent.match(/media\/[^"]+/g) || []
       
       expect(mediaPaths.length).toBeGreaterThan(0)
@@ -114,7 +114,7 @@ describe('Blog Deployment Integration Tests', () => {
     let htmlContent: string
 
     beforeAll(() => {
-      htmlContent = fs.readFileSync(week22HtmlPath, 'utf-8')
+      htmlContent = fs.readFileSync(week23HtmlPath, 'utf-8')
     })
 
     it('should not contain stray HTML syntax', () => {
